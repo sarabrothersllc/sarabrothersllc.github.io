@@ -1,0 +1,69 @@
+RUN THE SITE WITH AUTO-PUBLISH (Node server)
+--------------------------------------------
+1) Open PowerShell
+2) cd to the project root folder (this folder with index.html)
+3) Install and start the local server (first time only run install):
+   npm install
+   npm start
+
+4) Open the public site:
+   http://localhost:5500
+
+5) Open the Admin page:
+   http://localhost:5500/admin/index.html
+
+6) In Admin, click "Export JSON" to re-arrange and publish layouts.
+   - Changes are applied instantly and written to config.json automatically.
+
+Stop server: press Ctrl + C in the terminal.
+
+Install Node.js 18+.
+
+Create a package.json and install dependencies:
+Dependencies: express, nodemailer, dotenv
+
+Run the Node server from the project root Windsurf-SARA/:
+npm install
+npm start
+
+
+HERO VARIABLES VALUES 
+--------------------------------------------------------------------------------------
+heroWidth: string (e.g., "100%", "1200px")
+heroScale: "Y" | "N"
+heroFit: "fit" | "cover" | "contain" | "stretch" | "fill" | "none" | "scale-down"
+heroMaintainAspect: "Y" | "N"
+
+
+Color suggestions for tints
+--------------------------------------------------------------------------------------
+Use these in heroOverlayColor when you want colored glass. Pair with:
+heroOverlayOpacity: 0.25–0.35
+heroOverlayBlur: "12px"
+heroOverlayBlendMode: "screen" (or "lighten")
+[Blue] #2563eb (vivid) or #60a5fa (lighter)
+[Green] #16a34a (rich) or #22c55e (brighter)
+[Red] #dc2626 (rich) or #ef4444 (brighter)
+[Maroon] #800000 classic or #7f1d1d deep maroon
+[Chocolate] #3e2723 (matches your theme)
+
+Black
+heroOverlayColor": "#0b0b0e",
+80% opacity black: #000000CC
+50% opacity black: #00000080
+----------------------------------
+Blue glass: #e0f2ff
+Green glass: #d1fae5
+Red glass: #fee2e2
+Maroon glass: #fde2e2 (soft maroon tint)
+Chocolate glass: #f3e8e6 (very subtle warm tint)
+
+
+Notes and tweaks
+Brightness/gloss: Increase heroOverlayBlur (e.g., "28px") and adjust heroOverlayOpacity to fine-tune “crystal black” look. Prefer heroOverlayBlendMode: "soft-light" for a refined gloss, or "overlay" for stronger contrast.
+Alignment and spacing: Adjust the vertical spacing between the two lines by editing .hero-text-inner { gap: 8px; } in 
+styles.css
+.
+Height: Control hero height via site.styles.home.heroHeight (e.g., "400px").
+
+

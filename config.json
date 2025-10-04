@@ -1,0 +1,326 @@
+{ "site": {
+    "title": "SARA Brothers",
+    "description": "Premium Direct Thermal Shipping Labels",
+    "theme": {
+      "primary": "#1a56db",
+      "secondary": "#1c64f2",
+      "background": "#f0eded",
+      "surface": "#f7f7f8",
+      "text": "#111111",
+      "muted": "#4a4a4a"
+    },
+    "styles": {
+      "header": {
+        "logoWidth": "4in",
+        "logoHeight": "4in",
+        "socialIconPadding": "4px",
+        "socialIconBg": "#e5e7eb"
+      },
+      "home": {
+        "heroHeight": "600px",
+        "heroWidth": "100%",
+        "heroScale": "Y",
+        "heroFit": "cover",
+        "heroMaintainAspect": "Y",
+        "heroOverlayEnabled": "",
+        "heroOverlayColor": "#800000",
+        "heroOverlayOpacity": 0.48,
+        "heroOverlayBlur": "24px",
+        "heroOverlayBlendMode": "overlay",
+        "heroText1": {
+          "text": "SARA Brothers",
+          "fontSize": "48px",
+          "bold": "Y",
+          "italic": "N",
+          "color": "#ffffff"
+        },
+        "heroText2": {
+          "text": "Quality you can trust.",
+          "fontSize": "22px",
+          "bold": "N",
+          "italic": "N",
+          "color": "#e5e7eb"
+        }
+      }
+    },
+    "pages": {
+      "home": "Y",
+      "products": "Y",
+      "contact": "Y",
+      "testimonials": "N",
+      "home2": "N"
+    }
+  },
+
+  "home2": {
+    "visible": "Y",
+    "title": "Showcase",
+    "items": [
+      {
+        "image": "assets/images/sample1.jpg",
+        "alt": "Sample 1",
+        "title": "Label 1",
+        "bold": "Y",
+        "content": {
+          "header": { "text": "Header One", "visible": "Y", "fontSize": "28px", "bold": "Y", "italic": "N", "underline": "N" },
+          "subHeader": { "text": "Sub Header One", "visible": "Y", "fontSize": "18px", "bold": "N", "italic": "N", "underline": "N" },
+          "paragraph1": { "text": "This is the first paragraph for item one.", "visible": "Y", "fontSize": "16px", "bold": "N", "italic": "N", "underline": "N" },
+          "bullets": { "visible": "Y", "fontSize": "16px", "bold": "N", "italic": "N", "underline": "N", "items": ["Point A","Point B","Point C"] },
+          "paragraph2": { "text": "Closing paragraph for item one.", "visible": "Y", "fontSize": "16px", "bold": "N", "italic": "N", "underline": "N" }
+        }
+      },
+      {
+        "image": "assets/images/sample2.jpg",
+        "alt": "Sample 2",
+        "title": "Label 2",
+        "bold": "N",
+        "content": {
+          "header": { "text": "Header Two", "visible": "Y", "fontSize": "28px", "bold": "Y", "italic": "N", "underline": "N" },
+          "subHeader": { "text": "Sub Header Two", "visible": "Y", "fontSize": "18px", "bold": "N", "italic": "N", "underline": "N" },
+          "paragraph1": { "text": "First paragraph for item two.", "visible": "Y", "fontSize": "16px", "bold": "N", "italic": "N", "underline": "N" },
+          "bullets": { "visible": "Y", "fontSize": "16px", "bold": "N", "italic": "N", "underline": "N", "items": ["Point 1","Point 2"] },
+          "paragraph2": { "text": "Second paragraph for item two.", "visible": "Y", "fontSize": "16px", "bold": "N", "italic": "N", "underline": "N" }
+        }
+      }
+    ]
+  },
+
+  "header": {
+    "logo": "assets/images/logo.jpg",
+    "breadcrumbs": "N",
+    "socialIconSize": "35px",
+    "menu": [
+      { "text": "Home", "hash": "#/home", "visible": "Y" },
+      { "text": "Home 2", "hash": "#/home2", "visible": "Y" },
+      { "text": "Products", "hash": "#/products", "visible": "Y" },
+      { "text": "Contact Us", "hash": "#/contact", "visible": "Y" },
+      { "text": "Testimonials", "hash": "#/testimonials", "visible": "Y" }
+    ],
+    "socialMedia": [
+      { "name": "Facebook", "url": "https://facebook.com/sarabrothers", "icon": "assets/icons/facebook.svg", "visible": "Y" },
+      { "name": "Instagram", "url": "https://instagram.com/sarabrothers", "icon": "assets/icons/instagram.svg", "visible": "Y" },
+      { "name": "TikTok", "url": "https://tiktok.com/sarabrothers", "icon": "assets/icons/tiktok.svg", "visible": "Y" },
+      { "name": "Twitter", "url": "https://twitter.com/sarabrothers", "icon": "assets/icons/twitter.svg", "visible": "Y" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/company/sarabrothers", "icon": "assets/icons/linkedin.svg", "visible": "Y" }
+    ]
+  },
+
+  "home": {
+    "hero": {
+      "image": "assets/images/home/SARAWebsiteCollage.jpg",
+      "alt": "Our premium shipping labels"
+    },
+    "brandSection": {
+      "visible": "Y",
+      "title": "About Us: The SARA Brothers Promise",
+      "text": "At SARA Brothers, we see beyond the adhesive and paper; we know that <b>every label is a promise.</b> It's the final reflection of the <b>care and professionalism</b> you put into your business.<br>As a <b>proud U.S.-based, family-owned company, </b> our foundation is built on the simple truth that <b>trust is earned through genuine quality. </b> We've personally navigated the intensity of the e-commerce world. That firsthand experience is our engine, driving us to engineer solutions that empower your business. We create labels that do more than just stick—they actively help you <b>ship smarter, faster, and better. </b><br><br>Choosing SARA Brothers means partnering with a company that understands your challenges and is committed to your <b>uninterrupted success. </b><br><br><br><br><hr>"
+        },
+    "imageTextBlocks": {
+      "visible": "Y",
+      "items": [
+        {
+          "image": "assets/images/home/Home-OurStory.jpg",
+          "title": "<h2>Our Story: From Sellers to Solution</h2>",
+          "text": "SARA Brothers was founded on a critical realization: the heart of efficient e-commerce is the <b>reliable shipping label</b>. For small businesses, a single label failure means more than just wasted material; it translates to <b>lost time, money, and damaged reputation</b>.<br><br>We identified a gap in the market for truly <b>reliable, premium labels</b> built to withstand the journey. We dedicated ourselves to mastering one thing and doing it right: <b>professional-grade thermal labels</b>.<br><br>Our journey began not just as a supplier, but as fellow sellers who needed a better solution. This unique perspective ensures every product we offer is a direct answer to the <b>operational demands of modern commerce</b>.<br><br><br><br><br>",
+          "position": "right", 
+          "align": "top-left",
+          "width": "750px",
+          "height": "450px"
+        },
+        { 
+          "image": "assets/images/home/Home-WhatWeDo.jpg", 
+          "title": "<h2>What We Do: Labels Engineered for Confidence</h2>", 
+          "text": "We provide <b>premium thermal shipping labels</b> meticulously engineered for <b>absolute, flawless reliability</b>. Our commitment to performance is built into every feature:<ul><li><b>Top-Coated Surfaces</b> deliver <b>sharp, crisp print quality</b> that scanners read on the first pass, every time.</li><li><b>Industrial-Strength Adhesive</b> is formulated to withstand the extremes of <b>heat, cold, oil, and moisture</b>.</li><li>Enjoy <b>Jam-Free Performance</b> in your thermal printer, eliminating costly workflow disruptions. </li><li>Our direct thermal design means <b>zero cost or hassle for ink or toner</b>—just pure efficiency. </li><li><b>Easy-Tear Perforated Edges</b> speed up handling and boost overall packing productivity</li></ul>This level of engineering ensures your shipments maintain <b>perfect clarity and consistency</b>, so you can always <b>ship with confidence</b>.<br><br><br><br><br>", 
+          "position": "left", 
+          "align": "left", 
+          "width": "750", 
+          "height": "500" 
+        },
+        { 
+          "image": "assets/images/home/Home-WhoWeServe.jpg", 
+          "title": "<h2>Who We Serve: Empowering the Seller Community</h2>", 
+          "text": "<br>Our mission is to be the reliable engine for the entire seller community across the U.S. We exist to empower <b>Amazon FBA & FBM entrepreneurs, busy e-commerce shops, and valued local small businesses.</b><br><br>Thousands already rely on our labels as the <b>unfailing operational backbone</b> of their shipping departments. We believe that when your essential tools work flawlessly, your team is <b>free to focus on growth.</b><br><br>Your success is the single metric that drives us; we aim to eliminate label stress so you can concentrate on building your brand. Partner with SARA Brothers and join the ranks of businesses shipping with <b>uninterrupted efficiency.</b><br><br><br>", 
+          "position": "right", 
+          "align": "left", 
+          "width": "800px", 
+          "height": "420px" 
+        },
+        { 
+          "image": "assets/images/home/HOME-OurValues.jpg", 
+          "title": "<h2>Our Values: Quality, Partnership, and Responsibility</h2>", 
+          "text": "<br><h3><b>&#9989 Family-Owned & Community-Driven</b></h3>Choosing SARA Brothers means you are <b>supporting a U.S.-based small business</b>built on personal accountability and genuine care for our customers. <br><br><h3><b>&#9989 Quality You Can Trust</b></h3>Every label is <b>rigorously engineered</b> and tested for reliability, guaranteeing your business operations run smoothly and <b>without disruptive delays</b>.<br><br><h3><b>&#9989 Customer-Centered Service</b></h3>We view ourselves as a <b>dedicated partner, not just a supplier</b>. We succeed only when your business thrives, and our service reflects that deep commitment. <br><br><h3><b>&#9989 Sustainability Commitment</b></h3>Our labels are made with <b>eco-conscious, BPA-free materials</b> and strictly comply with leading certifications like <b>FSC, ROHS, and REACH</b>. They are also free from <b>PFAS and PROP65 chemicals</b>, ensuring a responsible product you can feel good about using.<br><br>", 
+          "position": "left", 
+          "align": "left", 
+          "width": "700px", 
+          "height": "600px" 
+        }
+      ]
+    },
+
+    "carouselIntro": { "visible": "Y", "title": "Explore Our Product Gallery", "text": "Scroll through images and videos showcasing label quality, durability, and ease of use." },
+    "carousel": {
+      "visible": "Y",
+      "mediaWidth": "100%",
+      "mediaHeight": "200px",
+      "items": [
+        { "type": "image", "image": "assets/images/carousel/A1.jpg", "text": "Crisp printing for every label", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A2.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A3.jpg", "text": "Crisp printing for every label", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Crisp printing for every label", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Crisp printing for every label", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
+        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Crisp printing for every label", "link": "#/products" },
+        { "type": "video", "video": "assets/videos/A1.mp4", "poster": "assets/images/carousel/video-poster.jpg", "text": "See it in action", "autoplay": true, "muted": true }
+      ]
+    }
+  },
+
+  "products": {
+    "thumbnail": { "width": 64, "height": 64, "visibleCount": 5 },
+    "mainImage": { "width": 480, "height": 480 },
+    "zoom": { "enabled": true },
+    "items": [
+      {
+        "visible": "Y",
+        "title": "SARA Brothers: 4x6 Self-Adhesive Direct Thermal Shipping Perforated Labels, Fanfold Stacks, Commercial Grade (Fanfold, Pack of 4 -2000 Labels)",
+        "subtitle": "Fanfold Stacks • Commercial Grade",
+        "id": "P2",
+        "gallery": [
+          { "type": "image", "src": "assets/images/products/FanfoldImage_1Main.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_2BoxInHand.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_3Quality.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_4Packages.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_5Printing.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_6USFlag.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_7Trust.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_8Layers.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_9family.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_10SARA.jpg" },
+          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true },
+          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true }
+        ],
+        "descriptionHtml": 
+        "<p>Our 4x6 Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
+        "detailsHtml": "<h3>Key Features</h3><p>✔ 4” x 6” label size <br>✔ No ink or toner required  <br>✔ Wide Compatible with Rollo, Zebra, Munbyn and most direct thermal printers <br>✔ Available in Packs of 4 (2,000 labels) or 6 (3,000 labels)  <br>✔ Designed for thermal printers (Not inkjet or laser printers) <br>✔ BPA-free material and compliant with RoHS testing standards for environmental and consumer safety</p>",
+        "bullets": [
+          "<strong>Commercial-Grade Quality</strong> – Premium top-coated direct thermal paper offers excellent print clarity and durability, ideal for high-volume shipping needs. Waterproof, smudge-proof, oil-proof, and alcohol-resistant, ensuring your labels stay intact during shipping and handling.",
+          "<strong>Strong Adhesive Backing</strong> – Sticks firmly to corrugated boxes, mailers, polybags, and envelopes without curling or peeling during transit.",
+          "<strong>Jam-Free, Perforated Design</strong> – Fanfold stacks feed smoothly into your printer and tear easily along pre-cut perforations for a fast workflow.",
+          "<strong>Wide Compatibility</strong> – Works seamlessly with Rollo, Zebra, Munbyn, Polono, Arkscan, LabelRange, and most direct thermal printers. No ink or toner required. Not for laser or inkjet printers",
+          "<strong>Ideal for eCommerce & Fulfillment</strong> – Perfect for Amazon FBA/FBM, USPS, UPS, FedEx, eBay, Etsy, Shopify sellers, warehouses, and logistics teams.",
+          "<strong>Sustainable, Safe & Eco-Friendly</strong> – Made from BPA-free material, FSC Certified, RoHS & REACH Compliant, PFAS-Free & Prop 65 Approved for environmental and consumer safety. Ideal for health-conscious businesses."
+        ],
+        "buyButtons": [
+          { "text": "Buy on Amazon", "url": "https://amazon.com/", "icon": "assets/icons/amazon.svg", "visible": "Y" },
+          { "text": "Buy on eBay", "url": "https://ebay.com/", "icon": "assets/icons/ebay.svg", "visible": "N" },
+          { "text": "Buy on Walmart", "url": "https://walmart.com/", "icon": "assets/icons/walmart.svg", "visible": "N" }
+        ]
+      },
+      {
+        "visible": "N",
+        "title": "SARA Brothers: 4x6 Self-Adhesive Direct Thermal Shipping Perforated Labels, Fanfold Stacks, Commercial Grade (Fanfold, Pack of 4 -2000 Labels)",
+        "subtitle": "Fanfold Stacks • Commercial Grade",
+        "id": "P2",
+        "gallery": [
+          { "type": "image", "src": "assets/images/products/FanfoldImage_1Main.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_2BoxInHand.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_3Quality.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_4Packages.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_5Printing.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_6USFlag.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_7Trust.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_8Layers.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_9family.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_10SARA.jpg" },
+          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true },
+          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true }
+        ],
+        "descriptionHtml": 
+        "<p>Our 4x6 Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
+        "detailsHtml": "<h3>Key Features</h3><p>✔ 4” x 6” label size <br>✔ No ink or toner required  <br>✔ Wide Compatible with Rollo, Zebra, Munbyn and most direct thermal printers <br>✔ Available in Packs of 4 (2,000 labels) or 6 (3,000 labels)  <br>✔ Designed for thermal printers (Not inkjet or laser printers) <br>✔ BPA-free material and compliant with RoHS testing standards for environmental and consumer safety</p>",
+        "bullets": [
+          "<strong>Commercial-Grade Quality</strong> – Premium top-coated direct thermal paper offers excellent print clarity and durability, ideal for high-volume shipping needs. Waterproof, smudge-proof, oil-proof, and alcohol-resistant, ensuring your labels stay intact during shipping and handling.",
+          "<strong>Strong Adhesive Backing</strong> – Sticks firmly to corrugated boxes, mailers, polybags, and envelopes without curling or peeling during transit.",
+          "<strong>Jam-Free, Perforated Design</strong> – Fanfold stacks feed smoothly into your printer and tear easily along pre-cut perforations for a fast workflow.",
+          "<strong>Wide Compatibility</strong> – Works seamlessly with Rollo, Zebra, Munbyn, Polono, Arkscan, LabelRange, and most direct thermal printers. No ink or toner required. Not for laser or inkjet printers",
+          "<strong>Ideal for eCommerce & Fulfillment</strong> – Perfect for Amazon FBA/FBM, USPS, UPS, FedEx, eBay, Etsy, Shopify sellers, warehouses, and logistics teams.",
+          "<strong>Sustainable, Safe & Eco-Friendly</strong> – Made from BPA-free material, FSC Certified, RoHS & REACH Compliant, PFAS-Free & Prop 65 Approved for environmental and consumer safety. Ideal for health-conscious businesses."
+        ],
+        "buyButtons": [
+          { "text": "Buy on Amazon", "url": "https://amazon.com/", "icon": "assets/icons/amazon.svg", "visible": "Y" },
+          { "text": "Buy on eBay", "url": "https://ebay.com/", "icon": "assets/icons/ebay.svg", "visible": "Y" },
+          { "text": "Buy on Walmart", "url": "https://walmart.com/", "icon": "assets/icons/walmart.svg", "visible": "N" }
+        ]
+      }
+    ]
+  },
+
+  "contact": {
+    "emailRecipients": [
+      "sales@sarabrothers.com",
+      "support@sarabrothers.com"
+    ],
+    "successMessage": "We have received your message and shall get back to you in 1-2 business day.",
+    "form": {
+      "firstName": { "label": "First Name", "required": "Y"},
+      "middleName": { "label": "Middle Name", "required": "N"},
+      "lastName": { "label": "Last Name", "required": "Y" },
+      "email": { "label": "Email", "type": "email", "required": "Y" },
+      "phone": { "label": "Phone", "type": "tel", "required": "N" },
+      "message": { "label": "Message", "type": "textarea", "required": "Y" },
+      "country": { "label": "Country", "type": "text", "required": "N" }
+    },
+    "card": {
+      "visible": "N",
+      "logo": { "image": "assets/images/logo.png", "alt": "SARA Brothers" },
+      "name": "SARA Brothers",
+      "nameVisible": "Y",
+      "title": "Customer Support",
+      "titleVisible": "N",
+      "phone": "+1 (111) 222-3333",
+      "phoneVisible": "N",
+      "email": "support@sarabrothers.com",
+      "emailVisible": "Y",
+      "address": "123 Market Street, San Jose, CA 95110",
+      "addressVisible": "N",
+      "icons": {
+        "phone": "assets/icons/phone.svg",
+        "email": "assets/icons/mail.svg",
+        "address": "assets/icons/location.svg"
+      }
+    },
+    "submit": { "text": "Send", "emailProvider": "internal" }
+  },
+
+  "testimonials": {
+    "visible": "Y",
+    "storage": "local", 
+    "form": {
+      "name": { "label": "Your Name", "required": "Y" },
+      "email": { "label": "Email", "type": "email", "required": "Y" },
+      "phone": { "label": "Phone", "type": "tel", "required": "N" },
+      "testimonial": { "label": "Your Feedback", "type": "textarea", "required": "Y" }
+    }
+  },
+
+  "footer": {
+    "links": [
+      { "text": "About Us", "url": "#/home", "visible": "N" },
+      { "text": "Shipping Policy", "url": "#", "visible": "N" },
+      { "text": "Return Policy", "url": "#", "visible": "N" },
+      { "text": "Privacy Policy", "url": "#", "visible": "N" },
+      { "text": "Terms of Service", "url": "#", "visible": "N" }
+    ],
+    "badgeSize": "90px",
+    "badges": [
+      { "image": "assets/images/badges/BPA_Free.svg", "alt": "BPA Free", "visible": "Y" },
+      { "image": "assets/images/badges/RoHS.svg", "alt": "RoHS Compliant", "visible": "Y" },
+      { "image": "assets/images/badges/REACH.svg", "alt": "REACH Compliant", "visible": "Y" },
+      { "image": "assets/images/badges/FSC.svg", "alt": "FSC Certified", "visible": "Y" },
+      { "image": "assets/images/badges/Prop65.svg", "alt": "Prop65 Approved", "visible": "Y" },
+      { "image": "assets/images/badges/PFAS.svg", "alt": "PFAS-Free", "visible": "Y" }
+    ]
+  }
+}

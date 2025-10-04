@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <title>FSC Certified Icon (Navy Blue - Updated Leaf)</title>
+  <style>
+    .rect-border-fsc {
+      fill: none;
+      stroke: #0D47A1; /* Darker Navy Blue border */
+      stroke-width: 5;
+      rx: 15;
+      ry: 15;
+    }
+    .leaf-fsc {
+      fill: #1976D2; /* Navy Blue leaf */
+    }
+    .leaf-vein-fsc {
+      fill: none;
+      stroke: #FFFFFF; /* White veins on leaf */
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+    .text-fsc-main {
+      font-family: sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      fill: #333333;
+      text-anchor: start;
+    }
+    .text-fsc-sub {
+      font-family: sans-serif;
+      font-size: 20px;
+      fill: #333333;
+      text-anchor: start;
+    }
+  </style>
+  <g id="FSC_Certified_Icon_Navy_Blue_Updated_Leaf">
+    <rect class="rect-border-fsc" x="5" y="5" width="190" height="90"/>
+
+    <path class="leaf-fsc" d="M25,85 C15,70 15,30 35,15 C55,0 60,30 50,50 C40,70 45,90 25,85 Z"/>
+    
+    <line class="leaf-vein-fsc" x1="35" y1="15" x2="35" y2="80"/>
+    <line class="leaf-vein-fsc" x1="35" y1="30" x2="20" y2="40"/>
+    <line class="leaf-vein-fsc" x1="35" y1="45" x2="20" y2="55"/>
+    <line class="leaf-vein-fsc" x1="35" y1="60" x2="20" y2="70"/>
+    <line class="leaf-vein-fsc" x1="35" y1="30" x2="48" y2="35"/>
+    <line class="leaf-vein-fsc" x1="35" y1="45" x2="48" y2="48"/>
+
+    <text class="text-fsc-main" x="70" y="45">FSC</text>
+    <text class="text-fsc-sub" x="70" y="70">Certified</text>
+  </g>
+</svg>

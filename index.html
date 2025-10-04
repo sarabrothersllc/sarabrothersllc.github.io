@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARA Brothers - Premium Shipping Labels</title>
+    <meta name="description" content="High-quality direct thermal shipping labels by SARA Brothers. BPA free, RoHS certified, and made with commercial-grade materials.">
+    
+    
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    
+    <script src="app.js"></script>
+</head>
+
+
+
+<body>
+    <!-- ============================= -->
+    <!-- Skip link (accessibility)     -->
+    <!-- ============================= -->
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    
+    
+    <!-- ============================= -->
+    <!-- Header: top bar, main, crumbs -->
+    <!-- ============================= -->
+    <header class="site-header" id="site-header">
+        <!-- Header: top contact/social row -->
+        <div class="header-top">
+            <div class="container">
+              <div class="header-contact header-contact-top"></div>
+            </div>
+        </div>
+        
+        <!-- Header: main row (logo + primary nav + mobile toggle) -->
+        <div class="header-main">
+            <div class="container">
+                <div class="logo-container">
+                    <a href="/" class="logo">
+                        <img src="assets/images/logo.png" alt="SARA Brothers Logo" id="site-logo">
+                    </a>
+                </div>
+                <!-- Primary navigation (desktop + mobile drawer) -->
+                <nav id="primary-navigation" class="primary-navigation" aria-label="Primary">
+                    <ul class="nav-menu" role="menubar"></ul>
+                </nav>
+                <!-- Right side: contact row -->
+                <div class="header-right">
+                  <div class="header-contact header-contact-bottom"></div>
+                </div>
+                <!-- Mobile menu toggle button -->
+                <button class="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </div>
+        
+        
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs-wrap">
+            <div class="container">
+                <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumb"></nav>
+            </div>
+        </div>
+
+        
+    </header>
+
+    
+    
+    <!-- ============================= -->
+    <!-- Main app container (SPA root) -->
+    <!-- ============================= -->
+    <main id="main-content" class="app container" tabindex="-1"></main>
+
+    
+    <!-- ============================= -->
+    <!-- Footer                        -->
+    <!-- ============================= -->
+    <footer class="site-footer" id="site-footer" aria-label="Site footer">
+        <div class="container footer-top">
+            
+            <!-- Footer: quick links -->
+            <nav class="footer-links" aria-label="Footer links">
+                <ul id="footer-links-list"></ul>
+            </nav>
+            
+            <!-- Footer: social (top-right) -->
+            <div class="footer-social" id="footer-social"></div>
+
+            <!-- Footer: business info -->
+            <div class="footer-info">
+                <div id="business-info"></div>
+            </div>
+        </div>
+        <!-- Footer: bottom bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-badges-wrap">
+                    <div class="footer-badge-title">Sustainable, Safe &amp; Eco &amp; Environment Friendly</div>
+                    <div class="footer-badges" id="footer-badges-bottom"></div>
+                </div>
+                <div class="copyright"> <span id="year"></span> <span id="brand-name">SARA Brothers</span><sup class="tm">&trade;</sup>. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+  </body>
+</html>
