@@ -1,5 +1,5 @@
 RUN THE SITE WITH AUTO-PUBLISH (Node server)
---------------------------------------------
+---------------------------------------------
 1) Open PowerShell
 2) cd to the project root folder (this folder with index.html)
 3) Install and start the local server (first time only run install):
