@@ -22,21 +22,21 @@
         "heroScale": "Y",
         "heroFit": "cover",
         "heroMaintainAspect": "Y",
-        "heroOverlayEnabled": "",
-        "heroOverlayColor": "#800000",
+        "heroOverlayEnabled": "N",
+        "heroOverlayColor": "#f3e8e6",
         "heroOverlayOpacity": 0.48,
         "heroOverlayBlur": "24px",
         "heroOverlayBlendMode": "overlay",
         "heroText1": {
           "text": "SARA Brothers",
-          "fontSize": "48px",
+          "fontSize": "70px",
           "bold": "Y",
           "italic": "N",
           "color": "#ffffff"
         },
         "heroText2": {
           "text": "Quality you can trust.",
-          "fontSize": "22px",
+          "fontSize": "40px",
           "bold": "N",
           "italic": "N",
           "color": "#e5e7eb"
@@ -46,7 +46,7 @@
     "pages": {
       "home": "Y",
       "products": "Y",
-      "contact": "Y",
+      "contact": "N",
       "testimonials": "N",
       "home2": "N"
     }
@@ -97,11 +97,11 @@
       { "text": "Testimonials", "hash": "#/testimonials", "visible": "Y" }
     ],
     "socialMedia": [
-      { "name": "Facebook", "url": "https://facebook.com/sarabrothers", "icon": "assets/icons/facebook.svg", "visible": "Y" },
-      { "name": "Instagram", "url": "https://instagram.com/sarabrothers", "icon": "assets/icons/instagram.svg", "visible": "Y" },
-      { "name": "TikTok", "url": "https://tiktok.com/sarabrothers", "icon": "assets/icons/tiktok.svg", "visible": "Y" },
-      { "name": "Twitter", "url": "https://twitter.com/sarabrothers", "icon": "assets/icons/twitter.svg", "visible": "Y" },
-      { "name": "LinkedIn", "url": "https://linkedin.com/company/sarabrothers", "icon": "assets/icons/linkedin.svg", "visible": "Y" }
+      { "name": "Facebook", "url": "https://facebook.com/sarabrothers", "icon": "assets/icons/facebook.svg", "visible": "N" },
+      { "name": "Instagram", "url": "https://instagram.com/sarabrothers", "icon": "assets/icons/instagram.svg", "visible": "N" },
+      { "name": "TikTok", "url": "https://tiktok.com/sarabrothers", "icon": "assets/icons/tiktok.svg", "visible": "N" },
+      { "name": "Twitter", "url": "https://twitter.com/sarabrothers", "icon": "assets/icons/twitter.svg", "visible": "N" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/company/sarabrothers", "icon": "assets/icons/linkedin.svg", "visible": "N" }
     ]
   },
 
@@ -161,18 +161,18 @@
     "carousel": {
       "visible": "Y",
       "mediaWidth": "100%",
-      "mediaHeight": "200px",
+      "mediaHeight": "275px",
       "items": [
-        { "type": "image", "image": "assets/images/carousel/A1.jpg", "text": "Crisp printing for every label", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A2.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A3.jpg", "text": "Crisp printing for every label", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Crisp printing for every label", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Crisp printing for every label", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Fanfold for easy loading", "link": "#/products" },
-        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Crisp printing for every label", "link": "#/products" },
-        { "type": "video", "video": "assets/videos/A1.mp4", "poster": "assets/images/carousel/video-poster.jpg", "text": "See it in action", "autoplay": true, "muted": true }
+        { "type": "image", "image": "assets/images/carousel/A1.jpg", "text": "Crystal Clear Prints"},
+        { "type": "image", "image": "assets/images/carousel/A2.jpg", "text": "Ultra Strong Adhesive"},
+        { "type": "image", "image": "assets/images/carousel/A3.jpg", "text": "Easy Tear-Off"},
+        { "type": "image", "image": "assets/images/carousel/A4.jpg", "text": "Easy to Peel-Off"},
+        { "type": "image", "image": "assets/images/carousel/A5.jpg", "text": "Oil-Proof "},
+        { "type": "image", "image": "assets/images/carousel/A6.jpg", "text": "Water-Proof"},
+        { "type": "image", "image": "assets/images/carousel/A7.jpg", "text": "Scratch-Proof"},
+        { "type": "image", "image": "assets/images/carousel/A8.jpg", "text": "Weather-Resistant "},
+        { "type": "image", "image": "assets/images/carousel/A9.jpg", "text": "Versatile for every need"},
+        { "type": "video", "video": "assets/video/FanfoldVideo1.mp4", "poster": "assets/video/FanfoldVideo1_Poster.jpg", "text": "Unboxing", "autoplay": false, "muted": true }
       ]
     }
   },
@@ -184,7 +184,7 @@
     "items": [
       {
         "visible": "Y",
-        "title": "SARA Brothers: 4x6 Self-Adhesive Direct Thermal Shipping Perforated Labels, Fanfold Stacks, Commercial Grade (Fanfold, Pack of 4 -2000 Labels)",
+        "title": "4x6 Self-Adhesive Direct Thermal Shipping Perforated Labels (Available in Pack of 4 and Pack of 6 Fanfold Stacks)",
         "subtitle": "Fanfold Stacks • Commercial Grade",
         "id": "P2",
         "gallery": [
@@ -202,7 +202,7 @@
           { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true }
         ],
         "descriptionHtml": 
-        "<p>Our 4x6 Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
+        "<p><h3>Coming soon</h3>Our 4x6 Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
         "detailsHtml": "<h3>Key Features</h3><p>✔ 4” x 6” label size <br>✔ No ink or toner required  <br>✔ Wide Compatible with Rollo, Zebra, Munbyn and most direct thermal printers <br>✔ Available in Packs of 4 (2,000 labels) or 6 (3,000 labels)  <br>✔ Designed for thermal printers (Not inkjet or laser printers) <br>✔ BPA-free material and compliant with RoHS testing standards for environmental and consumer safety</p>",
         "bullets": [
           "<strong>Commercial-Grade Quality</strong> – Premium top-coated direct thermal paper offers excellent print clarity and durability, ideal for high-volume shipping needs. Waterproof, smudge-proof, oil-proof, and alcohol-resistant, ensuring your labels stay intact during shipping and handling.",
@@ -213,7 +213,7 @@
           "<strong>Sustainable, Safe & Eco-Friendly</strong> – Made from BPA-free material, FSC Certified, RoHS & REACH Compliant, PFAS-Free & Prop 65 Approved for environmental and consumer safety. Ideal for health-conscious businesses."
         ],
         "buyButtons": [
-          { "text": "Buy on Amazon", "url": "https://amazon.com/", "icon": "assets/icons/amazon.svg", "visible": "Y" },
+          { "text": "Buy on Amazon", "url": "https://amazon.com/", "icon": "assets/icons/amazon.svg", "visible": "N" },
           { "text": "Buy on eBay", "url": "https://ebay.com/", "icon": "assets/icons/ebay.svg", "visible": "N" },
           { "text": "Buy on Walmart", "url": "https://walmart.com/", "icon": "assets/icons/walmart.svg", "visible": "N" }
         ]
