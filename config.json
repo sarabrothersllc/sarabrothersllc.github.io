@@ -204,7 +204,7 @@
         ],
         "descriptionHtml": 
         "<p><marquee behavior=\"alternate\"><h3 style=\"color: purple; font-size: 1em; font-weight: bold;\">Coming soon at Amazon marketplace</h3></marquee>Our 4x6\" Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
-        "detailsHtml": "<span style=\"color: rgb(8, 63, 133); font-size: 1m; font-weight: bold;\">Available in </span><br>✔ Pack of 4 Fanfold Stacks (4x500 = 2000 Labels), and <br>✔ Pack of 6 Fanfold Stacks (6x500 = 3000 Labels)<br><br><p style=\"color: rgb(8, 63, 133); font-size: 1.5em; font-weight: bold;\">*** Contact us at <a href=\"mailto:support@sarabrothers.com\">support@sarabrothers.com</a></u> for bulk purchase discount</p>",
+        "detailsHtml": "<span style=\"color: rgb(8, 63, 133); font-size: 1m; font-weight: bold;\">Available in </span><br>✔ Pack of 4 Fanfold Stacks (4x500 = 2000 Labels), and <br>✔ Pack of 6 Fanfold Stacks (6x500 = 3000 Labels)<br><br><p style=\"color: rgb(8, 63, 133); font-size: 1.5em; font-weight: bold;\">*** Contact us for bulk purchase discount</p>",
         "bullets": [
           "<strong>Commercial-Grade Quality</strong> – Premium top-coated direct thermal paper offers excellent print clarity and durability, ideal for high-volume shipping needs. Waterproof, smudge-proof, oil-proof, and alcohol-resistant, ensuring your labels stay intact during shipping and handling.",
           "<strong>Strong Adhesive Backing</strong> – Sticks firmly to corrugated boxes, mailers, polybags, and envelopes without curling or peeling during transit.",
@@ -222,10 +222,11 @@
       },
       {
         "visible": "N",
-        "title": "SARA Brothers: 4x6 Self-Adhesive Direct Thermal Shipping Perforated Labels, Fanfold Stacks, Commercial Grade (Fanfold, Pack of 4 -2000 Labels)",
-        "subtitle": "Fanfold Stacks • Commercial Grade",
+        "title": "4x6\" Self-Adhesive Direct Thermal Shipping Perforated Labels, Commercial Grade<br>Fanfold Stacks (500 labels per stack)",
+        "subtitle": "<b>Pack of 4 Fanfold Stacks (4x500 = 2000 Labels) and Pack of 6 Fanfold Stacks (6x500 = 3000 Labels) </b>",
         "id": "P2",
-        "gallery": [
+        "gallery": 
+        [
           { "type": "image", "src": "assets/images/products/FanfoldImage_1Main.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_2BoxInHand.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_3Quality.jpg" },
@@ -236,12 +237,11 @@
           { "type": "image", "src": "assets/images/products/FanfoldImage_8Layers.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_9family.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_10SARA.jpg" },
-          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true },
           { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true }
         ],
         "descriptionHtml": 
-        "<p>Our 4x6 Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
-        "detailsHtml": "<h3>Key Features</h3><p>✔ 4” x 6” label size <br>✔ No ink or toner required  <br>✔ Wide Compatible with Rollo, Zebra, Munbyn and most direct thermal printers <br>✔ Available in Packs of 4 (2,000 labels) or 6 (3,000 labels)  <br>✔ Designed for thermal printers (Not inkjet or laser printers) <br>✔ BPA-free material and compliant with RoHS testing standards for environmental and consumer safety</p>",
+        "<p><marquee behavior=\"alternate\"><h3 style=\"color: purple; font-size: 1em; font-weight: bold;\">Coming soon at Amazon marketplace</h3></marquee>Our 4x6\" Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
+        "detailsHtml": "<span style=\"color: rgb(8, 63, 133); font-size: 1m; font-weight: bold;\">Available in </span><br>✔ Pack of 4 Fanfold Stacks (4x500 = 2000 Labels), and <br>✔ Pack of 6 Fanfold Stacks (6x500 = 3000 Labels)<br><br><p style=\"color: rgb(8, 63, 133); font-size: 1.5em; font-weight: bold;\">*** Contact us for bulk purchase discount</p>",
         "bullets": [
           "<strong>Commercial-Grade Quality</strong> – Premium top-coated direct thermal paper offers excellent print clarity and durability, ideal for high-volume shipping needs. Waterproof, smudge-proof, oil-proof, and alcohol-resistant, ensuring your labels stay intact during shipping and handling.",
           "<strong>Strong Adhesive Backing</strong> – Sticks firmly to corrugated boxes, mailers, polybags, and envelopes without curling or peeling during transit.",
@@ -251,8 +251,9 @@
           "<strong>Sustainable, Safe & Eco-Friendly</strong> – Made from BPA-free material, FSC Certified, RoHS & REACH Compliant, PFAS-Free & Prop 65 Approved for environmental and consumer safety. Ideal for health-conscious businesses."
         ],
         "buyButtons": [
-          { "text": "Buy on Amazon", "url": "https://amazon.com/", "icon": "assets/icons/amazon.svg", "visible": "Y" },
-          { "text": "Buy on eBay", "url": "https://ebay.com/", "icon": "assets/icons/ebay.svg", "visible": "Y" },
+          { "text": "Buy on Amazon", "url": "https://amazon.com/", "icon": "assets/icons/amazon.svg", "visible": "N" },
+          { "text": "Buy on Shopify", "url": "https://shopify.com/", "icon": "assets/icons/shopify.svg", "visible": "N" },
+          { "text": "Buy on eBay", "url": "https://ebay.com/", "icon": "assets/icons/ebay.svg", "visible": "N" },
           { "text": "Buy on Walmart", "url": "https://walmart.com/", "icon": "assets/icons/walmart.svg", "visible": "N" }
         ]
       }
@@ -261,7 +262,7 @@
 
   "contact": {
     "emailRecipients": [
-      "support@sarabrothers.com"
+      "XXX"
     ],
     "successMessage": "We have received your message and shall get back to you in 1-2 business day.",
     "form": {
@@ -278,13 +279,13 @@
       "logo": { "image": "assets/images/logo.png", "alt": "SARA Brothers" },
       "name": "SARA Brothers",
       "nameVisible": "Y",
-      "title": "Customer Support",
+      "title": "XXXXXXX",
       "titleVisible": "N",
-      "phone": "+1 (111) 222-3333",
+      "phone": "XXXXX",
       "phoneVisible": "N",
-      "email": "support@sarabrothers.com",
-      "emailVisible": "Y",
-      "address": "123 Market Street, San Jose, CA 95110",
+      "email": "xx@xx.com",
+      "emailVisible": "N",
+      "address": "XXXXX",
       "addressVisible": "N",
       "icons": {
         "phone": "assets/icons/phone.svg",
