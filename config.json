@@ -46,7 +46,7 @@
     "pages": {
       "home": "Y",
       "products": "Y",
-      "contact": "N",
+      "contact": "Y",
       "testimonials": "N",
       "home2": "N"
     }
@@ -293,7 +293,7 @@
         "address": "assets/icons/location.svg"
       }
     },
-    "submit": { "text": "Send", "emailProvider": "internal" }
+    "submit": { "text": "Send", "emailProvider": "emailjs" }
   },
 
   "testimonials": {

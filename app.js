@@ -1275,6 +1275,41 @@ function renderProducts() {
   renderList(allItems);
   frag.appendChild(pageWrap); App.el.main.innerHTML = ''; App.el.main.appendChild(frag);
 }
+
+// =============================
+// Page: Testimonials (localStorage-backed list)
+// =============================
+function renderTestimonials() {
+  const cfg = App.config.testimonials || {};
+  const frag = document.createDocumentFragment();
+  const s = el('section', 'testimonials-page');
+  s.appendChild(el('h2', '', 'User Testimonials'));
+
+  const form = el('form', 'testimonial-form');
+  const fields = cfg.form || {};
+  function addField(name, f) {
+    const wrap = el('label', 'form-field');
+    const req = boolYN(f.required);
+    const lbl = `${f.label || name}${req ? ' ' : ''}${req ? '<span class="req">*</span>' : ''}`;
+    wrap.innerHTML = `<span class="label">${lbl}</span>`;
+    let input; if ((f.type || '').toLowerCase() === 'textarea') input = el('textarea', 'input'); else { input = el('input', 'input'); input.type = f.type || 'text'; }
+    input.name = name; if (req) input.required = true; wrap.appendChild(input); form.appendChild(wrap);
+  }
+  Object.entries(fields).forEach(([name, f]) => addField(name, f));
+  const actions = el('div', 'form-actions center'); const submit = el('button', 'btn btn-primary btn-lg'); submit.type = 'submit'; submit.textContent = 'Submit Testimonial'; actions.appendChild(submit); form.appendChild(actions);
+  const list = el('div', 'testimonial-list');
+  function loadTestimonials() { const items = JSON.parse(localStorage.getItem('sb_testimonials') || '[]'); list.innerHTML = ''; items.forEach(it => { const card = el('div', 'testimonial-card'); card.appendChild(el('div', 'testimonial-meta', `${it.name} â€¢ ${it.email} â€¢ ${it.date}`)); card.appendChild(el('p', 'testimonial-text', it.testimonial)); list.appendChild(card); }); }
+  form.addEventListener('submit', (e) => { e.preventDefault(); const data = new FormData(form); const item = { date: formatDate() }; for (const [k, v] of data.entries()) item[k] = v; const items = JSON.parse(localStorage.getItem('sb_testimonials') || '[]'); items.unshift(item); localStorage.setItem('sb_testimonials', JSON.stringify(items)); form.reset(); loadTestimonials(); });
+  s.appendChild(form); s.appendChild(list); frag.appendChild(s); App.el.main.innerHTML = ''; App.el.main.appendChild(frag); loadTestimonials();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+
 // =============================
 // Page: Contact (form + info card)
 // =============================
@@ -1334,31 +1369,44 @@ function renderContact() {
     const messageEl = form.querySelector('textarea[name="message"], textarea[name="msg"], textarea[name="messageText"]');
     const message = (messageEl?.value || '').trim();
     if (!form.checkValidity()) { form.reportValidity(); return; }
+
+
     const provider = (cfg.submit && cfg.submit.emailProvider) || 'mailto';
-    if (provider === 'internal') {
-      const submitBtn = form.querySelector('button[type="submit"], .btn.btn-primary');
-      const prevText = submitBtn ? submitBtn.textContent : '';
-      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
-      try {
-        const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ first, last, email, message }) });
-        if (!res.ok) throw new Error('Failed to send');
-        const msg = document.createElement('div'); msg.className = 'form-success'; msg.textContent = cfg.successMessage || 'Your message has been sent.'; form.insertBefore(msg, form.firstChild); form.reset();
-      } catch (err) {
-        console.error('Contact submission failed', err);
-      } finally {
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevText; }
-      }
-      return;
-    } else {
-      const recipients = (cfg.emailRecipients && cfg.emailRecipients.length ? cfg.emailRecipients : null) || [App.config.footer?.businessInfo?.email] || [App.config.site?.businessInfo?.email] || [];
-      const to = (recipients.filter(Boolean)[0]) || '';
-      const subject = encodeURIComponent(`Contact form: ${first || ''} ${last || ''}`.trim() || 'Website Contact Submission');
-      const lines = [ `Name: ${first} ${last}`.trim(), `Email: ${email}`, '', 'Message:', message ];
-      const body = encodeURIComponent(lines.join('\n'));
-      if (to) { window.location.href = `mailto:${to}?subject=${subject}&body=${body}`; }
-      else { const msg = document.createElement('div'); msg.className = 'form-error-global'; msg.setAttribute('role', 'alert'); msg.textContent = 'No recipient email is configured. Please add contact.emailRecipients or footer.businessInfo.email in config.json.'; form.insertBefore(msg, form.firstChild); return; }
-      form.reset();
-    }
+
+    if (provider === 'emailjs') {
+    const submitBtn = form.querySelector('button[type="submit"], .btn.btn-primary');
+    const prevText = submitBtn ? submitBtn.textContent : '';
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
+    // Collect all field values from the form dynamically
+   const formData = {};
+   new FormData(form).forEach((value, key) => formData[key] = value);
+
+   try {
+    // Send via EmailJS (make sure your template expects these fields)
+    await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData);
+    
+    const msg = document.createElement('div');
+    msg.className = 'form-success';
+    msg.textContent = cfg.successMessage || 'Your message has been sent.';
+    form.insertBefore(msg, form.firstChild);
+    form.reset();
+   } catch (err) {
+    console.error('EmailJS send failed', err);
+    const msg = document.createElement('div');
+    msg.className = 'form-error-global';
+    msg.setAttribute('role', 'alert');
+    msg.textContent = 'Failed to send message. Please try again later.';
+    form.insertBefore(msg, form.firstChild);
+   } finally {
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevText; }
+  }
+  return;
+}
+
+
+
+
   });
 
   s.appendChild(form);
@@ -1366,37 +1414,5 @@ function renderContact() {
   frag.appendChild(s);
   App.el.main.innerHTML = '';
   App.el.main.appendChild(frag);
-}
-// =============================
-// Page: Testimonials (localStorage-backed list)
-// =============================
-function renderTestimonials() {
-  const cfg = App.config.testimonials || {};
-  const frag = document.createDocumentFragment();
-  const s = el('section', 'testimonials-page');
-  s.appendChild(el('h2', '', 'User Testimonials'));
-
-  const form = el('form', 'testimonial-form');
-  const fields = cfg.form || {};
-  function addField(name, f) {
-    const wrap = el('label', 'form-field');
-    const req = boolYN(f.required);
-    const lbl = `${f.label || name}${req ? ' ' : ''}${req ? '<span class="req">*</span>' : ''}`;
-    wrap.innerHTML = `<span class="label">${lbl}</span>`;
-    let input; if ((f.type || '').toLowerCase() === 'textarea') input = el('textarea', 'input'); else { input = el('input', 'input'); input.type = f.type || 'text'; }
-    input.name = name; if (req) input.required = true; wrap.appendChild(input); form.appendChild(wrap);
-  }
-  Object.entries(fields).forEach(([name, f]) => addField(name, f));
-  const actions = el('div', 'form-actions center'); const submit = el('button', 'btn btn-primary btn-lg'); submit.type = 'submit'; submit.textContent = 'Submit Testimonial'; actions.appendChild(submit); form.appendChild(actions);
-  const list = el('div', 'testimonial-list');
-  function loadTestimonials() { const items = JSON.parse(localStorage.getItem('sb_testimonials') || '[]'); list.innerHTML = ''; items.forEach(it => { const card = el('div', 'testimonial-card'); card.appendChild(el('div', 'testimonial-meta', `${it.name} â€¢ ${it.email} â€¢ ${it.date}`)); card.appendChild(el('p', 'testimonial-text', it.testimonial)); list.appendChild(card); }); }
-  form.addEventListener('submit', (e) => { e.preventDefault(); const data = new FormData(form); const item = { date: formatDate() }; for (const [k, v] of data.entries()) item[k] = v; const items = JSON.parse(localStorage.getItem('sb_testimonials') || '[]'); items.unshift(item); localStorage.setItem('sb_testimonials', JSON.stringify(items)); form.reset(); loadTestimonials(); });
-  s.appendChild(form); s.appendChild(list); frag.appendChild(s); App.el.main.innerHTML = ''; App.el.main.appendChild(frag); loadTestimonials();
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
 }
 
