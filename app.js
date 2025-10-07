@@ -1313,6 +1313,7 @@ if (document.readyState === 'loading') {
 // =============================
 // Page: Contact (form + info card)
 // =============================
+
 function renderContact() {
   const cfg = App.config.contact || {};
   const frag = document.createDocumentFragment();
@@ -1373,6 +1374,10 @@ function renderContact() {
 
     const provider = (cfg.submit && cfg.submit.emailProvider) || 'mailto';
 
+    // =======================================================================================
+    //    Contact-Us-email (2 of 2)
+    //    Send via EmailJS (make sure your template expects these fields)
+    // =======================================================================================
     if (provider === 'emailjs') {
     const submitBtn = form.querySelector('button[type="submit"], .btn.btn-primary');
     const prevText = submitBtn ? submitBtn.textContent : '';
@@ -1381,25 +1386,23 @@ function renderContact() {
     // Collect all field values from the form dynamically
    const formData = {};
    new FormData(form).forEach((value, key) => formData[key] = value);
+   try{
 
-   try {
-    // Send via EmailJS (make sure your template expects these fields)
-    await emailjs.send("service_d5e74gf", "template_fe17vp1", formData);
-    
-    const msg = document.createElement('div');
-    msg.className = 'form-success';
-    msg.textContent = cfg.successMessage || 'Your message has been sent.';
-    form.insertBefore(msg, form.firstChild);
-    form.reset();
-   } catch (err) {
-    console.error('EmailJS send failed', err);
-    const msg = document.createElement('div');
-    msg.className = 'form-error-global';
-    msg.setAttribute('role', 'alert');
-    msg.textContent = 'Failed to send message. Please try again later.';
-    form.insertBefore(msg, form.firstChild);
-   } finally {
-    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevText; }
+      await emailjs.send("service_d5e74gf", "template_fe17vp1", formData);
+      const msg = document.createElement('div');
+      msg.className = 'form-success';
+      msg.textContent = cfg.successMessage || 'Your message has been sent.';
+      form.insertBefore(msg, form.firstChild);
+      form.reset();
+    } catch (err) {
+      console.error('EmailJS send failed', err);
+      const msg = document.createElement('div');
+      msg.className = 'form-error-global';
+      msg.setAttribute('role', 'alert');
+      msg.textContent = 'Failed to send message. Please try again later.';
+      form.insertBefore(msg, form.firstChild);
+    } finally {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevText; }
   }
   return;
 }
