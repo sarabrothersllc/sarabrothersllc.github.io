@@ -101,7 +101,7 @@
       { "name": "Instagram", "url": "https://instagram.com/sarabrothers", "icon": "assets/icons/instagram.svg", "visible": "N" },
       { "name": "TikTok", "url": "https://tiktok.com/sarabrothers", "icon": "assets/icons/tiktok.svg", "visible": "N" },
       { "name": "Twitter", "url": "https://twitter.com/sarabrothers", "icon": "assets/icons/twitter-x.svg", "visible": "N" },
-      { "name": "LinkedIn", "url": "https://linkedin.com/company/sarabrothers", "icon": "assets/icons/linkedln.svg", "visible": "N" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/sarabrothers/", "icon": "assets/icons/linkedln.svg", "visible": "Y" },
       { "name": "Whatsapp", "url": "https://whatsapp.com", "icon": "assets/icons/whatsapp.svg", "visible": "N" }
     ]
   },
