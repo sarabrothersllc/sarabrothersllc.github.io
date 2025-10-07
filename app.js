@@ -1384,7 +1384,7 @@ function renderContact() {
 
    try {
     // Send via EmailJS (make sure your template expects these fields)
-    await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData);
+    await emailjs.send("service_d5e74gf", "template_fe17vp1", formData);
     
     const msg = document.createElement('div');
     msg.className = 'form-success';
