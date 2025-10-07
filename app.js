@@ -1378,6 +1378,12 @@ function renderContact() {
     //    Contact-Us-email (2 of 2)
     //    Send via EmailJS (make sure your template expects these fields)
     // =======================================================================================
+
+    // Initialize EmailJS with your Public Key
+    (function() {
+      emailjs.init("VOkQZ-STSbUeEDE3V"); // YOUR actual public key here
+    })();
+
     if (provider === 'emailjs') {
     const submitBtn = form.querySelector('button[type="submit"], .btn.btn-primary');
     const prevText = submitBtn ? submitBtn.textContent : '';
