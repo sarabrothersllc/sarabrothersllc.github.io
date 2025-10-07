@@ -200,7 +200,6 @@
           { "type": "image", "src": "assets/images/products/FanfoldImage_8Layers.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_9family.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_10SARA.jpg" },
-          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true },
           { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true }
         ],
         "descriptionHtml": 
