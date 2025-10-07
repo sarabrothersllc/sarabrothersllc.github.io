@@ -187,7 +187,8 @@
         "title": "<p style=\"color: black; font-size: 1em; font-weight: bold;\">4x6 Self-Adhesive Direct Thermal Shipping Perforated Labels <br>Fanfold Stacks, Commercial Grade</p>",
         "subtitle": "<p style=\"color: black; font-weight: bold;\">Available in Pack of 4, and Pack of 6 Fanfold Stacks</p>",
         "id": "P2",
-        "gallery": [
+        "gallery": 
+        [
           { "type": "image", "src": "assets/images/products/FanfoldImage_1Main.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_2BoxInHand.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_3Quality.jpg" },
