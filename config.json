@@ -237,7 +237,8 @@
           { "type": "image", "src": "assets/images/products/FanfoldImage_8Layers.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_9family.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_10SARA.jpg" },
-          { "type": "video", "src": "assets/videos/FanfoldVideo1.mp4", "poster": "assets/videos/FanfoldVideo1_Poster.jpg", "autoplay": true, "muted": true }
+          { "type": "video", "src": "assets/videos/JamFree-SmoothPrints-W-Poster.mp4", "poster": "assets/videos/JamFree-SmoothPrints-W-Poster.jpg", "autoplay": true, "muted": true },
+          { "type": "video", "src": "assets/videos/Unboxing.mp4", "poster": "assets/videos/Unboxing_Poster.jpg", "autoplay": true, "muted": true }
         ],
         "descriptionHtml": 
         "<p><marquee behavior=\"alternate\"><h3 style=\"color: purple; font-size: 1em; font-weight: bold;\">Coming soon at Amazon marketplace</h3></marquee>Our 4x6\" Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br>Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p>",
