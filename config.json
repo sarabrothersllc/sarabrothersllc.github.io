@@ -173,8 +173,7 @@
         { "type": "image", "image": "assets/images/carousel/A7.jpg", "text": "Scratch-Proof"},
         { "type": "image", "image": "assets/images/carousel/A8.jpg", "text": "Weather-Resistant "},
         { "type": "image", "image": "assets/images/carousel/A9.jpg", "text": "Versatile for every need"},
-        { "type": "video", "video": "assets/video/JamFree-SmoothPrints-W-Poster.mp4", "poster": "assets/video/JamFree-SmoothPrints-W-Poster.jpg", "text": "Unboxing", "autoplay": false, "muted": true },
-        { "type": "video", "video": "assets/video/Unboxing.mp4", "poster": "assets/video/Unboxing.jpg", "text": "Unboxing", "autoplay": false, "muted": true }
+        { "type": "video", "video": "assets/video/JamFree-SmoothPrints-W-Poster.mp4", "poster": "assets/video/JamFree-SmoothPrints-W-Poster.jpg", "text": "Unboxing", "muted": true }
       ]
     }
   },
