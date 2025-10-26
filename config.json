@@ -28,15 +28,15 @@
         "heroOverlayBlur": "24px",
         "heroOverlayBlendMode": "overlay",
         "heroText1": {
-          "text": "SARA Brothers",
+          "text": "",
           "fontSize": "70px",
           "bold": "Y",
           "italic": "N",
           "color": "#ffffff"
         },
         "heroText2": {
-          "text": "Quality you can trust.",
-          "fontSize": "40px",
+          "text": "",
+          "fontSize": "25px",
           "bold": "N",
           "italic": "N",
           "color": "#e5e7eb"
