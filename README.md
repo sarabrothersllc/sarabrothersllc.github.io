@@ -2,7 +2,7 @@
 
 This project is a small, single-page app (SPA) that renders four pages from a JSON configuration and a lightweight JavaScript renderer. It also includes a tiny Express server for local development and for sending emails when the contact form is configured to use the internal provider.
 
-## Project Structure
+## Project Structure 
 
 - `index.html` — Base HTML structure for the SPA
 - `css/styles.css` — Styling for all pages and components
