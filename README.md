@@ -157,7 +157,7 @@ RUN THE SITE WITH AUTO-PUBLISH (Node server)
    npm start
 
 4) Open the public site:
-   http://localhost:5500
+   http://localhost:8000
 
 5) Open the Admin page:
    http://localhost:5500/admin/index.html
