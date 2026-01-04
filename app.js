@@ -1,3 +1,9 @@
+// Add at Line 1
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+window.addEventListener('load', () => window.scrollTo(0, 0));
+
 // =============================
 // App: Global state and handles
 // Holds config, route list, and cached DOM refs
