@@ -378,6 +378,7 @@ async function init() {
   window.addEventListener('resize', updateMobileContactStrip);
 
   window.addEventListener('hashchange', route);
+  
   route();
   App.hasLoaded = true;
 }
@@ -564,6 +565,9 @@ function titleCase(s) { return (s || '').replace(/(^|\b)([a-z])/g, (m, p1, p2) =
 // Router: render page by current hash and update UI state
 // =============================
 function route() {
+// FIX: Force the browser to jump to the top of the page on every navigation
+  window.scrollTo(0, 0);
+
   const hash = location.hash || '#/home';
   const routeName = hashToRoute(hash);
   const page = isPageEnabled(routeName) ? routeName : firstEnabledPage() || 'home';
@@ -572,16 +576,15 @@ function route() {
     const href = a.getAttribute('href') || '';
     a.classList.toggle('active', href === `#/${page}`);
   });
+
   buildBreadcrumbs(page);
 
   // Prefer admin-provided layout if present
   if (!(renderByLayout(page))) {
     switch (page) {
       case 'home': renderHome(); break;
-      case 'home2': renderHome2(); break;
       case 'products': renderProducts(); break;
       case 'contact': renderContact(); break;
-      case 'testimonials': renderTestimonials(); break;
       default: renderHome();
     }
   }

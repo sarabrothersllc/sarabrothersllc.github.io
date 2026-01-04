@@ -215,8 +215,9 @@
           "<strong>Sustainable, Safe & Eco-Friendly</strong> – Made from BPA-free material, FSC Certified, RoHS & REACH Compliant, PFAS-Free & Prop 65 Approved for environmental and consumer safety. Ideal for health-conscious businesses."
         ],
         "buyButtons": [
-          { "text": "Buy on Amazon 2000 Labels (4x500 Fanfold Stacks)", "url": "https://www.amazon.com/gp/product/B0FJBL41PF?th=1", "icon": "assets/icons/amazon.svg", "visible": "Y" },
-          { "text": "Buy on Amazon 3000 Labels (6x500 Fanfold Stacks)", "url": "https://www.amazon.com/gp/product/B0FJC8L9K1?th=1", "icon": "assets/icons/amazon.svg", "visible": "Y" },
+          { "text": "Buy on Amazon 500 Labels", "url": "https://www.amazon.com/gp/product/B0FJBL41PF?th=1", "icon": "assets/icons/amazon.svg", "visible": "N" },
+          { "text": "Buy on Amazon 2000 Labels", "url": "https://www.amazon.com/gp/product/B0FJBL41PF?th=1", "icon": "assets/icons/amazon.svg", "visible": "Y" },
+          { "text": "Buy on Amazon 3000 Labels", "url": "https://www.amazon.com/gp/product/B0FJC8L9K1?th=1", "icon": "assets/icons/amazon.svg", "visible": "Y" },
           { "text": "Buy on Shopify", "url": "https://shopify.com/", "icon": "assets/icons/shopify.svg", "visible": "N" },
           { "text": "Buy on eBay", "url": "https://ebay.com/", "icon": "assets/icons/ebay.svg", "visible": "N" },
           { "text": "Buy on Walmart", "url": "https://walmart.com/", "icon": "assets/icons/walmart.svg", "visible": "N" }
