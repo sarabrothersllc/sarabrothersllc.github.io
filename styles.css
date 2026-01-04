@@ -76,16 +76,21 @@
   --home_hero_width: 100vw;
   --home_hero_height: 300px;
   
-  --product_title_size: 24px;
-  --product_subtitle_size: 0.85rem
-  
-  --card_logo_size:1000px;
-  --card_logo_border: 1px solid var(--border-color);
-  
+
+/* Text Scaling: clamp(minimum, scaling_speed, maximum) */
+/* Fluid Typography: min size, scaling speed (vw), max size */
+  --product_title_size: clamp(1.4rem, 3.8vw, 2.2rem); 
+  --product_subtitle_size: clamp(0.95rem, 1.2vw, 1.1rem);
+  --brand_title_size: clamp(1.8rem, 5vw, 2.8rem);
+
+  /* KEEP IMAGES FIXED */
   --home_block_width: 460px;
   --home_block_height: 280px;
 
-  
+  --card_logo_size:1000px;
+  --card_logo_border: 1px solid var(--border-color);
+
+ 
   --border-color: #e5e7eb;
   --divider-color: rgba(0,0,0,0.06);
   /* Theme hooks for header/footer colors */
@@ -203,7 +208,6 @@
   --primary: #1a56db;
   --secondary: #1c64f2;
   --ring: rgba(26, 86, 219, 0.2);
-}
 
   /* Ensure the image inside the hero container respects the new width */
   .hero-container img, 
@@ -354,16 +358,68 @@ body { margin: 0; font-family: Montserrat, Roboto, ui-sans-serif, system-ui, -ap
 .brand-title { margin: 0; }
 .brand-subtitle { font-size: 0.7em; color: var(--muted); }
 .home-brand p { color: var(--muted); margin: 0; }
-.home-bullets ul { margin: 16px 0 0; padding-left: 22px; }
-.home-bullets li { margin: 6px 0; }
+
+/* Fix: Tighten Bullet List Spacing */
+.home-bullets ul { margin: 10px 0 0; padding: 0; list-style: none; }
+.home-bullets li { margin-bottom: 12px; line-height: 1.4; }
+.home-bullets li b, .home-bullets li strong { display: block; margin-bottom: 0px; }
+.home-bullets li p { margin: 0; padding: 0; }
+
+/* Fix: Header Scaling to match About Us */
+.brand-title, 
+.home-alt-blocks .alt-text h3 { 
+  font-size: var(--section_header_size) !important; 
+  margin: 0 0 8px 0; 
+}
+
+.home-alt-blocks .alt-text p { 
+  font-size: var(--body_text_size) !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fix: Header Scaling to match About Us */
+.brand-title, 
+.home-alt-blocks .alt-text h3 { 
+  font-size: var(--section_header_size) !important; 
+  margin: 0 0 8px 0; 
+}
+
+.home-alt-blocks .alt-text p { 
+  font-size: var(--body_text_size) !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .home-alt-blocks { display: grid; gap: 22px; margin-top: 16px; }
 .home-alt-blocks .alt-row { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; background: var(--alt-block-bg); border: var(--alt-block-border); border-radius: 14px; padding: 12px; }
 .home-alt-blocks .alt-row.image-right { direction: rtl; }
 .home-alt-blocks .alt-row.image-right .alt-text { direction: ltr; }
 .home-alt-blocks .alt-text { text-align: left; align-self: start; justify-self: start; }
 .home-alt-blocks img { width: 100%; height: auto; border-radius: 12px; border: var(--alt-block-img-border); max-width: 100%; object-fit: cover; }
-.home-alt-blocks .alt-text h3 { margin: 0 0 6px; font-size: 20px; }
-.home-alt-blocks .alt-text p { margin: 0; color: var(--muted); }
+
+
+
+/* This targets "Our Story: From Sellers to Solution" */
+.home-alt-blocks .alt-text h1 {
+  margin: 0 0 6px;
+  font-size: var(--product_title_size) !important;
+  line-height: 1.2;
+}
+
+.home-alt-blocks .alt-text p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--product_subtitle_size) !important;
+  line-height: 1.6;
+}
+
+/* This ensures the "About Us" section stays in sync */
+.brand-title {
+  font-size: var(--brand_title_size) !important;
+  margin: 0;
+}
+
 .home-carousel { margin-top: 10px; }
 .carousel-track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 14px; overflow-x: auto; padding-bottom: 6px; }
 .carousel-card { background: var(--carousel-card-bg); border: var(--carousel-card-border); border-radius: 12px; padding: 10px; min-height: 180px; }
