@@ -73,7 +73,7 @@
   --left_blank: 14%;
   --right_blank: 14%;
   
-  --home_hero_width: 100%;
+  --home_hero_width: 100vw;
   --home_hero_height: 300px;
   
   --product_title_size: 24px;
@@ -203,6 +203,15 @@
   --primary: #1a56db;
   --secondary: #1c64f2;
   --ring: rgba(26, 86, 219, 0.2);
+}
+
+  /* Ensure the image inside the hero container respects the new width */
+  .hero-container img, 
+  .hero-banner-image { 
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw !important;
+  }
 }
 
 
@@ -392,12 +401,42 @@ video:fullscreen, .gm-video:fullscreen { width: 100vw !important; height: 100vh 
 .main-media:fullscreen video { width: 100vw !important; height: 100vh !important; object-fit: contain !important; }
 .home-top-banner { width: var(--home_banner_width); height: var(--home_banner_height); border: 1px dashed var(--border-color); border-radius: 10px; background: var(--surface); display: grid; place-items: center; color: var(--muted); margin: 8px 0 16px; position: relative; z-index: 0; }
 .home-top-banner img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: block; }
-.home-hero { width: var(--home_hero_width); margin: 8px 0 16px; position: relative; z-index: 0; }
-.home-hero img { width: 100%; height: 300px; object-fit: cover; object-position: left top; display: block; border-radius: 10px; }
-.home-hero .hero-overlay { position: absolute; inset: 0; border-radius: 10px; pointer-events: none; z-index: 1; }
-.home-hero::after { content: ""; position: absolute; inset: 0; border-radius: 10px; pointer-events: none; z-index: 2; background: var(--hero-overlay-color, transparent); opacity: var(--hero-overlay-opacity, 0); backdrop-filter: var(--hero-overlay-blur, none); -webkit-backdrop-filter: var(--hero-overlay-blur, none); mix-blend-mode: var(--hero-overlay-blend, normal); }
-.home-hero .hero-text { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; text-align: center; padding: 0 16px; }
-.home-hero .hero-text-inner { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+/* 1. Fix the Hero Container */
+.home-hero { 
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important; 
+  margin: 8px 0 16px; 
+  position: relative; 
+  z-index: 0;
+  overflow: hidden; /* Prevents image overlap */
+}
+
+/* 2. Fix the Image specifically */
+.home-hero img { 
+  width: 100% !important; 
+  height: auto !important; 
+  min-height: auto !important; /* Forces it to stop following the JS 300px */
+  object-fit: contain !important; 
+  object-position: center; 
+  display: block; 
+  border-radius: 10px; 
+}
+
+/* 3. The "Mobile Squeeze" Fix (CRITICAL) */
+@media (max-width: 768px) {
+  /* This removes the 14% blank space on the sides for mobile */
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  /* Ensures the hero isn't fighting a fixed width from a parent div */
+  .home-hero {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .image-text-block img { width: var(--home_block_width); height: var(--home_block_height); object-fit: cover; display: block; }
 .home-block img { width: var(--home_block_width); height: var(--home_block_height); object-fit: cover; display: block; }
 .product-info { display: grid; gap: 8px; }
