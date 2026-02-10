@@ -191,13 +191,14 @@
         "gallery": 
         [
           { "type": "image", "src": "assets/images/products/FanfoldImage_1Main.jpg" },
-          { "type": "image", "src": "assets/images/products/FanfoldImage_2BoxInHand.jpg" },
-          { "type": "image", "src": "assets/images/products/FanfoldImage_3Quality.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_4Packages.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_4Packages2.png" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_3Quality.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_5Printing.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_6USFlag.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_7Trust.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_8Layers.jpg" },
+          { "type": "image", "src": "assets/images/products/FanfoldImage_2BoxInHand.jpg" },
           { "type": "image", "src": "assets/images/products/SARA_Competetive_Edge.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_9family.jpg" },
           { "type": "image", "src": "assets/images/products/FanfoldImage_10SARA.jpg" },
