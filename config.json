@@ -113,8 +113,8 @@
     },
     "brandSection": {
       "visible": "Y",
-      "title": "<p style=\"color: rgb(8, 63, 133); font-size: 0.75em; font-weight: bold;\">About Us: The SARA Brothers Promise </p>",
-      "text": "<br>At SARA Brothers, we see beyond the adhesive and paper; we know that <b>every label is a promise.</b> It's the final reflection of the <b>care and professionalism</b> you put into your business.<br><br>As a <b>proud U.S.-based, family-owned company, </b> our foundation is built on the simple truth that <b>trust is earned through genuine quality. </b> We've personally navigated the intensity of the e-commerce world. That firsthand experience is our engine, driving us to engineer solutions that empower your business. We create labels that do more than just stick—they actively help you <b>ship smarter, faster, and better. </b><br><br>Choosing SARA Brothers means partnering with a company that understands your challenges and is committed to your <b>uninterrupted success. </b><br><br><br><br><hr>"
+        "title": "<div style=\"line-height: 1;\"><span style=\"color: #D32F2F; font-size: 0.6em; font-weight: bold; animation: blinker 1s linear infinite;\">Authenticity Alert: SARA Brothers Thermal Labels are sold exclusively on Amazon. There are no authorized resellers and we do not sell on eBay and cannot guarantee the authenticity of items purchased there !!</span><span style=\"color: rgb(8, 63, 133); font-size: 0.7em; font-weight: bold; display: block; padding-top: 22px;\">About Us: The SARA Brothers Promise</span></div>",
+        "text": "At SARA Brothers, we see beyond the adhesive and paper; we know that <b>every label is a promise.</b> It's the final reflection of the <b>care and professionalism</b> you put into your business.<br><br>As a <b>proud U.S.-based, family-owned company, </b> our foundation is built on the simple truth that <b>trust is earned through genuine quality. </b> We've personally navigated the intensity of the e-commerce world. That firsthand experience is our engine, driving us to engineer solutions that empower your business. We create labels that do more than just stick—they actively help you <b>ship smarter, faster, and better. </b><br><br>Choosing SARA Brothers means partnering with a company that understands your challenges and is committed to your <b>uninterrupted success. </b><br><br><br><br><hr>"
         },
     "imageTextBlocks": {
       "visible": "Y",
@@ -186,7 +186,7 @@
       {
         "visible": "Y",
         "title": "4x6\" Self-Adhesive Direct Thermal Shipping Perforated Labels, Commercial Grade<br>Fanfold Stacks (500 labels per stack)",
-        "subtitle": "<b><p style=\"color: blue; font-size: 1.5m; font-weight: bold;\"><span style=\"color: blue; animation: blinker 1s linear infinite;\"> ** SARA Brothers products are sold exclusively on Amazon. </span></font></b>",
+        "subtitle": "<b><p style=\"color: blue; font-size: 1.5m; font-weight: bold;\"><span style=\"color: blue; animation: blinker 1s linear infinite;\"> ** Authenticity Alert: SARA Brothers Thermal Labels are sold exclusively on Amazon. <br>We have no authorized resellers on eBay or any other store; we cannot guarantee the quality or authenticity of items purchased from unauthorized sources.. </span></font></b>",
         "id": "P2",
         "gallery": 
         [
