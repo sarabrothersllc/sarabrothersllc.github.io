@@ -113,7 +113,7 @@
     },
     "brandSection": {
       "visible": "Y",
-        "title": "<div style=\"line-height: 1;\"><span style=\"color: green; font-size: 0.6em; font-weight: bold; animation: blinker 1s linear infinite;\">*** 40% off on already reduced price for limited time on all quantities ... Only at Amazon.com !!</span><span style=\"color: rgb(8, 63, 133); font-size: 0.7em; font-weight: bold; display: block; padding-top: 22px;\">About Us: The SARA Brothers Promise</span></div>",
+        "title": "<div style=\"line-height: 1;\"><span style=\"color: red; font-size: 0.6em; font-weight: bold; animation: blinker 1s linear infinite;\">** <font color=red>45% off for limited time on all quantities!!</font></span><span style=\"color: rgb(8, 63, 133); font-size: 0.7em; font-weight: bold; display: block; padding-top: 22px;\">About Us: The SARA Brothers Promise</span></div>",
         "text": "At SARA Brothers, we see beyond the adhesive and paper; we know that <b>every label is a promise.</b> It's the final reflection of the <b>care and professionalism</b> you put into your business.<br><br>As a <b>proud U.S.-based, family-owned company, </b> our foundation is built on the simple truth that <b>trust is earned through genuine quality. </b> We've personally navigated the intensity of the e-commerce world. That firsthand experience is our engine, driving us to engineer solutions that empower your business. We create labels that do more than just stick—they actively help you <b>ship smarter, faster, and better. </b><br><br>Choosing SARA Brothers means partnering with a company that understands your challenges and is committed to your <b>uninterrupted success. </b><br><br><br><br><hr>"
         },
     "imageTextBlocks": {
@@ -186,7 +186,7 @@
       {
         "visible": "Y",
         "title": "4x6\" Self-Adhesive Direct Thermal Shipping Perforated Labels, Commercial Grade<br>Fanfold Stacks (500 labels per stack)",
-        "subtitle": "<b><p style=\"color: blue; font-size: 1.5m; font-weight: bold;\"><span style=\"color: #D32F2F; animation: blinker 1s linear infinite;\"> ** Authenticity Alert: SARA Brothers Thermal Labels are sold exclusively on Amazon. <br>We have no authorized resellers on eBay or any other store; we cannot guarantee the quality or authenticity of items purchased from unauthorized sources.. </span></font></b>",
+        "subtitle": "<b><p style=\"color: blue; font-size: 1.5m; font-weight: bold;\"><span style=\"color: blue; animation: blinker 1s linear infinite;\">Available in: <br> - Pack of 4 Fandfold stacks (2000 labels), and <br> - Pack of 6 Fandfold stacks (3000 labels) </span></font></b>",
         "id": "P2",
         "gallery": 
         [
@@ -206,7 +206,7 @@
           { "type": "video", "src": "assets/videos/Unboxing.mp4", "poster": "assets/videos/Unboxing_Poster.jpg", "autoplay": true, "muted": true }
         ],
         "descriptionHtml": 
-        "<p><p style=\"color: rgb(8, 170, 133); font-size: 1.00em; font-weight: bold;\">*** 40% off on already reduced price for limited time<br>Only on Amazon!</p><br>Our 4x6\" Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br><p style=\"color: rgb(8, 63, 133); font-size: 1.5m; font-weight: bold;\">Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p></p>",
+        "<p><p style=\"color: rgb(8, 170, 133); font-size: 1.00em; font-weight: bold;\">45% off for limited time on all quantities!!<br>Only on Amazon!</p><br>Our 4x6\" Direct Thermal Shipping Labels are designed for high-efficiency packaging and logistics operations. Made from BPA-free, commercial-grade material, each label delivers crystal-clear printing with strong adhesion, making it perfect for Small business, Amazon FBA shipments, USPS, UPS, FedEx, and more. <br><br>These fanfold thermal labels are perforated for easy tearing and feature a smudge-resistant, top-coated surface to keep barcodes readable and professional. Whether you’re a warehouse manager or small business owner, our labels are built to save you time, reduce jams, and improve fulfillment speed.  <br><br><p style=\"color: rgb(8, 63, 133); font-size: 1.5m; font-weight: bold;\">Choose SARA Brothers for professional-grade shipping label solutions tailored to your growing business.</p></p>",
         "bullets": [
           "<strong>Commercial-Grade Quality</strong> – Premium top-coated direct thermal paper offers excellent print clarity and durability, ideal for high-volume shipping needs. Waterproof, smudge-proof, oil-proof, and alcohol-resistant, ensuring your labels stay intact during shipping and handling.",
           "<strong>Strong Adhesive Backing</strong> – Sticks firmly to corrugated boxes, mailers, polybags, and envelopes without curling or peeling during transit.",
