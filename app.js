@@ -157,7 +157,7 @@ const fallbackData = {
       {
         "title": "Who We Serve",
         "image": "assets/images/our-story/who-we-serve.jpg",
-        "text": "From home-based sellers to retail, grocery, warehouse, and delivery operations, our labels support teams that ship daily."
+        "text": "From home-based entrepreneurs to retail stores, warehouses, grocery chains and delivery operations, SARA Brothers <strong>supports people and businesses</strong> that keep products moving every day. Wherever shipments begin or end, our labels are built to deliver <strong>dependable performance you can trust</strong>."
       },
       {
         "title": "Our Story",
@@ -311,7 +311,9 @@ function productCard(product, index) {
   const images = getProductImages(product).slice(0, 5);
   article.innerHTML = `
     <div class="product-card-media product-detail-trigger" data-product-card-media aria-label="Swipe product images for ${product.shortName}">
-      <img data-product-card-image src="${images[0] || product.image}" alt="SARA Brothers ${product.shortName} pack">
+      <div class="product-card-track" data-product-card-track>
+        ${images.map((src, imageIndex) => `<img src="${src}" alt="SARA Brothers ${product.shortName} pack image ${imageIndex + 1}">`).join("")}
+      </div>
       ${images.length > 1 ? `
         <button class="product-card-nav product-card-prev" type="button" data-product-card-prev aria-label="Previous ${product.shortName} image">‹</button>
         <button class="product-card-nav product-card-next" type="button" data-product-card-next aria-label="Next ${product.shortName} image">›</button>
@@ -372,7 +374,7 @@ function getProductImages(product) {
   return [...new Set([product.image, ...(product.thumbs || [])].filter(Boolean))];
 }
 
-function attachSwipe(element, { onLeft, onRight, onTap } = {}) {
+function attachSwipe(element, { onLeft, onRight, onTap, onMove, onSettle } = {}) {
   if (!element) return;
 
   let startX = 0;
@@ -380,10 +382,41 @@ function attachSwipe(element, { onLeft, onRight, onTap } = {}) {
   let startTime = 0;
   let pointerId = null;
   let isTracking = false;
+  let isDragging = false;
 
   const threshold = 42;
   const restraint = 72;
   const allowedTime = 700;
+  const dragStart = 8;
+
+  const finish = (event, wasCanceled = false) => {
+    if (!isTracking || (event?.pointerId !== undefined && pointerId !== null && event.pointerId !== pointerId)) return;
+
+    const currentX = event?.clientX ?? startX;
+    const currentY = event?.clientY ?? startY;
+    const distanceX = currentX - startX;
+    const distanceY = currentY - startY;
+    const elapsed = Date.now() - startTime;
+    const isHorizontalSwipe = !wasCanceled && elapsed <= allowedTime && Math.abs(distanceX) >= threshold && Math.abs(distanceY) <= restraint;
+
+    element.classList.remove("is-touching", "is-dragging");
+    element.releasePointerCapture?.(pointerId);
+    isTracking = false;
+    pointerId = null;
+
+    onSettle?.(distanceX, distanceY, isHorizontalSwipe);
+
+    if (isHorizontalSwipe) {
+      event?.preventDefault?.();
+      if (distanceX < 0) onLeft?.();
+      if (distanceX > 0) onRight?.();
+      isDragging = false;
+      return;
+    }
+
+    if (!isDragging && Math.abs(distanceX) < 8 && Math.abs(distanceY) < 8) onTap?.(event);
+    isDragging = false;
+  };
 
   element.addEventListener("pointerdown", (event) => {
     if (event.pointerType === "mouse" && event.button !== 0) return;
@@ -396,56 +429,57 @@ function attachSwipe(element, { onLeft, onRight, onTap } = {}) {
     element.setPointerCapture?.(pointerId);
   });
 
-  element.addEventListener("pointerup", (event) => {
+  element.addEventListener("pointermove", (event) => {
     if (!isTracking || (pointerId !== null && event.pointerId !== pointerId)) return;
 
     const distanceX = event.clientX - startX;
     const distanceY = event.clientY - startY;
-    const elapsed = Date.now() - startTime;
-    const isHorizontalSwipe = elapsed <= allowedTime && Math.abs(distanceX) >= threshold && Math.abs(distanceY) <= restraint;
+    const absX = Math.abs(distanceX);
+    const absY = Math.abs(distanceY);
 
-    element.classList.remove("is-touching");
-    element.releasePointerCapture?.(pointerId);
-    isTracking = false;
-    pointerId = null;
-
-    if (isHorizontalSwipe) {
-      event.preventDefault();
-      if (distanceX < 0) onLeft?.();
-      if (distanceX > 0) onRight?.();
-      return;
+    if (!isDragging && (absX > dragStart || absY > dragStart)) {
+      if (absY > absX * 1.2) {
+        finish(event, true);
+        return;
+      }
+      isDragging = true;
+      element.classList.add("is-dragging");
     }
 
-    if (Math.abs(distanceX) < 8 && Math.abs(distanceY) < 8) onTap?.(event);
+    if (isDragging) {
+      event.preventDefault();
+      onMove?.(distanceX, distanceY);
+    }
+  });
+
+  element.addEventListener("pointerup", (event) => {
+    finish(event);
   });
 
   element.addEventListener("pointercancel", () => {
-    if (!isTracking) return;
-    element.classList.remove("is-touching");
-    if (pointerId !== null) element.releasePointerCapture?.(pointerId);
-    isTracking = false;
-    pointerId = null;
+    finish(null, true);
   });
 }
 
 function setupProductCardCarousel(article, images) {
   const media = article.querySelector("[data-product-card-media]");
-  const image = article.querySelector("[data-product-card-image]");
+  const track = article.querySelector("[data-product-card-track]");
   const dots = Array.from(article.querySelectorAll("[data-product-card-dot]"));
   const prevButton = article.querySelector("[data-product-card-prev]");
   const nextButton = article.querySelector("[data-product-card-next]");
-  if (!media || !image || images.length < 2) return;
+  if (!media || !track || images.length < 2) return;
 
   let currentIndex = 0;
   const normalizeIndex = (index) => (index + images.length) % images.length;
+  const setDragOffset = (offset) => {
+    track.style.setProperty("--product-drag-x", `${offset}px`);
+  };
 
   const setImage = (index) => {
     currentIndex = normalizeIndex(index);
-    image.classList.remove("is-changing");
-    window.requestAnimationFrame(() => {
-      image.src = images[currentIndex];
-      image.classList.add("is-changing");
-    });
+    setDragOffset(0);
+    track.style.setProperty("--product-slide-index", currentIndex);
+    track.style.setProperty("--product-slide-offset", `${currentIndex * -100}%`);
     dots.forEach((dot, dotIndex) => {
       dot.classList.toggle("is-active", dotIndex === currentIndex);
       dot.setAttribute("aria-current", dotIndex === currentIndex ? "true" : "false");
@@ -477,6 +511,11 @@ function setupProductCardCarousel(article, images) {
   };
 
   attachSwipe(media, {
+    onMove: (distanceX) => {
+      const maxDrag = media.clientWidth * 0.92;
+      setDragOffset(Math.max(-maxDrag, Math.min(maxDrag, distanceX)));
+    },
+    onSettle: () => setDragOffset(0),
     onLeft: () => {
       markSwiped();
       setImage(currentIndex + 1);
@@ -559,6 +598,13 @@ function renderProductDetailModal(product) {
   });
 
   attachSwipe(galleryWrap, {
+    onMove: (distanceX) => {
+      const maxDrag = (galleryWrap?.clientWidth || 320) * 0.28;
+      galleryImage.style.transform = `translateX(${Math.max(-maxDrag, Math.min(maxDrag, distanceX))}px) scale(0.985)`;
+    },
+    onSettle: () => {
+      galleryImage.style.transform = "";
+    },
     onLeft: () => setGalleryImage(galleryIndex + 1),
     onRight: () => setGalleryImage(galleryIndex - 1)
   });
@@ -977,6 +1023,13 @@ function setupQualityCarousel() {
   });
 
   attachSwipe(frame, {
+    onMove: (distanceX) => {
+      const maxDrag = (frame.clientWidth || window.innerWidth) * 0.22;
+      frame.style.setProperty("--quality-drag-x", `${Math.max(-maxDrag, Math.min(maxDrag, distanceX))}px`);
+    },
+    onSettle: () => {
+      frame.style.setProperty("--quality-drag-x", "0px");
+    },
     onLeft: () => goToSlide(currentIndex + 1),
     onRight: () => goToSlide(currentIndex - 1)
   });
