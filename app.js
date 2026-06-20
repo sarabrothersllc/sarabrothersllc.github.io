@@ -77,7 +77,7 @@ const fallbackData = {
       "shortName": "500 Labels",
       "pack": "1 Fanfold Stack",
       "count": "500 labels",
-      "price": "$14.99",
+      "price": "$15.99",
       "unit": "$0.03 / label",
       "asin": "B0GCBD5TK2",
       "amazon": "https://www.amazon.com/gp/product/B0GCBD5TK2?th=1",
@@ -146,7 +146,7 @@ const fallbackData = {
   ],
   "story": {
     "image": "assets/images/our-story/Home-OurStory.jpg",
-    "headline": "SARA Brothers Promise..",
+    "headline": "SARA Brothers Promise",
     "body": "SARA Brothers exists for sellers and teams who need shipping supplies they can trust every day. Our focus is simple: practical product quality, consistent fulfillment, clear prints, strong adhesion, and materials selected for safer, more responsible business use.",
     "cards": [
       {
@@ -165,10 +165,11 @@ const fallbackData = {
         "text": "Proudly women-owned and locally rooted in the USA, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. Your growth is our passion, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
       },
       {
-        "title": "Our Values",
+        "title": "Core Values",
         "image": "assets/images/our-story/our-values.jpeg",
-        "text": "Uncompromising quality, practical value, and responsibly sourced materials guide every product bearing the SARA Brothers name. We are committed to delivering dependable solutions that support your daily operations with integrity."
+        "text": "✓ <strong>PRECISION:</strong> Commercial-grade quality, sharp barcodes every time<br>✓ <strong>RESILIENCE:</strong> Engineered to keep your business moving<br>✓ <strong>INTEGRITY:</strong> BPA-free, Environment friendly materials<br>✓ <strong>PARTNERSHIP:</strong> We're sellers too. Your business continuity is our mission."
       }
+
     ]
   },
   "credentials": [
