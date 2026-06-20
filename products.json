@@ -145,29 +145,29 @@
     "whatWeDoImage": "assets/images/our-story/who-we-serve.jpg",
     "whoWeServeImage": "assets/images/our-story/our-story.png",
     "image": "assets/images/our-story/logo.png",
-
-
     "valuesImage": "assets/images/our-story/our-values.jpeg",
-
-
 
     "headline": "SARA Brothers Promise..",
     "body": "SARA Brothers exists for sellers and teams who need shipping supplies they can trust every day. Our focus is simple: practical product quality, consistent fulfillment, clear prints, strong adhesion, and materials selected for safer, more responsible business use.",
     "cards": [
       {
         "title": "What We Do",
+        "image": "assets/images/our-story/what-we-do.jpg",
         "text": "Through our unwavering commitment to excellence, we manufacture & supply premium, commercial-grade 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and reliable performance, ensuring your daily shipping workflows run smoothly without a hitch."
       },
       {
         "title": "Who We Serve",
+        "image": "assets/images/our-story/who-we-serve.jpg",
         "text": "From home-based sellers to retail, grocery, warehouse, and delivery operations, our labels support teams that ship daily."
       },
       {
         "title": "Our Story",
+        "image": "assets/images/our-story/our-story.png",
         "text": "Proudly women-owned and locally rooted in the USA, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. Your growth is our passion, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
       },
       {
         "title": "Our Values",
+        "image": "assets/images/our-story/our-values.jpeg",
         "text": "Uncompromising quality, practical value, and responsibly sourced materials guide every product bearing the SARA Brothers name. We are committed to delivering dependable solutions that support your daily operations with integrity."
       }
     ]
