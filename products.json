@@ -148,7 +148,7 @@
       {
         "title": "What We Do",
         "image": "assets/images/our-story/what-we-do.jpg",
-        "text": "Through our unwavering commitment to excellence, we manufacture & supply premium, commercial-grade 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and reliable performance, ensuring your daily shipping workflows run smoothly without a hitch."
+        "text": "Through our unwavering commitment to excellence, we manufacture & supply <strong>premium, commercial-grade</strong> 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and <strong>reliable performance</strong>, ensuring your daily shipping workflows run smoothly without a hitch."
       },
       {
         "title": "Who We Serve",
@@ -158,7 +158,7 @@
       {
         "title": "Our Story",
         "image": "assets/images/our-story/our-story.png",
-        "text": "Proudly women-owned and locally rooted in the USA, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. Your growth is our passion, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
+        "text": "Proudly <strong>women-owned</strong> and <strong>locally rooted in the USA</strong>, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. <strong>Your growth is our passion</strong>, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
       },
       {
         "title": "Core Values",
@@ -226,6 +226,6 @@
     "BPA-free material for dependable daily business use",
     "No ink, toner, or ribbon required"
   ],
-  "printers": ["Rollo", "Zebra", "Munbyn", "Polono", "Arkscan", "LabelRange", "Most direct thermal printers"],
-  "carriers": ["USPS", "UPS", "FedEx", "DHL", "Amazon FBA", "eBay", "Shopify", "Walmart"]
+  "printers": ["Rollo", "Zebra", "Munbyn", "Polono", "Arkscan", "LabelRange", "Most Direct Thermal Printers"],
+  "carriers": ["USPS", "UPS", "FedEx", "DHL", "Amazon FBA", "eBay", "Shopify", "Walmart", "More.."]
 }

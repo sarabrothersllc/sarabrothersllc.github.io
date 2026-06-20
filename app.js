@@ -152,7 +152,7 @@ const fallbackData = {
       {
         "title": "What We Do",
         "image": "assets/images/our-story/what-we-do.jpg",
-        "text": "Through our unwavering commitment to excellence, we manufacture & supply premium, commercial-grade 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and reliable performance, ensuring your daily shipping workflows run smoothly without a hitch."
+        "text": "Through our unwavering commitment to excellence, we manufacture & supply <strong>premium, commercial-grade</strong> 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and <strong>reliable performance</strong>, ensuring your daily shipping workflows run smoothly without a hitch."
       },
       {
         "title": "Who We Serve",
@@ -162,7 +162,7 @@ const fallbackData = {
       {
         "title": "Our Story",
         "image": "assets/images/our-story/our-story.png",
-        "text": "Proudly women-owned and locally rooted in the USA, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. Your growth is our passion, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
+        "text": "Proudly <strong>women-owned</strong> and <strong>locally rooted in the USA</strong>, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. <strong>Your growth is our passion</strong>, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
       },
       {
         "title": "Core Values",
@@ -238,7 +238,7 @@ const fallbackData = {
     "Polono",
     "Arkscan",
     "LabelRange",
-    "Most direct thermal printers"
+    "Most Direct Thermal Printers"
   ],
   "carriers": [
     "USPS",
@@ -248,7 +248,8 @@ const fallbackData = {
     "Amazon FBA",
     "eBay",
     "Shopify",
-    "Walmart"
+    "Walmart",
+    "More.."
   ],
   "announcements": [
     "Authenticity Check: Sold Exclusively on Amazon.com",
@@ -307,8 +308,18 @@ function productCard(product, index) {
   article.className = `product-card${index === 0 ? " is-active" : ""}`;
   article.tabIndex = 0;
   article.dataset.id = product.id;
+  const images = getProductImages(product).slice(0, 5);
   article.innerHTML = `
-    <img class="product-detail-trigger" src="${product.image}" alt="SARA Brothers ${product.shortName} pack">
+    <div class="product-card-media product-detail-trigger" data-product-card-media aria-label="Swipe product images for ${product.shortName}">
+      <img data-product-card-image src="${images[0] || product.image}" alt="SARA Brothers ${product.shortName} pack">
+      ${images.length > 1 ? `
+        <button class="product-card-nav product-card-prev" type="button" data-product-card-prev aria-label="Previous ${product.shortName} image">‹</button>
+        <button class="product-card-nav product-card-next" type="button" data-product-card-next aria-label="Next ${product.shortName} image">›</button>
+        <div class="product-card-dots" aria-label="${product.shortName} image navigation">
+          ${images.map((_, imageIndex) => `<button type="button" class="${imageIndex === 0 ? "is-active" : ""}" data-product-card-dot aria-label="Show image ${imageIndex + 1}" aria-current="${imageIndex === 0 ? "true" : "false"}"></button>`).join("")}
+        </div>
+      ` : ""}
+    </div>
     <div class="product-meta">
       <div>
         <strong>${product.shortName}</strong>
@@ -324,7 +335,12 @@ function productCard(product, index) {
   `;
 
   article.addEventListener("click", (event) => {
-    if (event.target.closest("a")) return;
+    if (article.dataset.carouselSwiped === "true") {
+      event.preventDefault();
+      delete article.dataset.carouselSwiped;
+      return;
+    }
+    if (event.target.closest("a, button")) return;
     openProductDetailModal(product.id, article);
   });
 
@@ -335,6 +351,7 @@ function productCard(product, index) {
     }
   });
 
+  setupProductCardCarousel(article, images);
   return article;
 }
 
@@ -353,6 +370,122 @@ function selectProduct(id) {
 
 function getProductImages(product) {
   return [...new Set([product.image, ...(product.thumbs || [])].filter(Boolean))];
+}
+
+function attachSwipe(element, { onLeft, onRight, onTap } = {}) {
+  if (!element) return;
+
+  let startX = 0;
+  let startY = 0;
+  let startTime = 0;
+  let pointerId = null;
+  let isTracking = false;
+
+  const threshold = 42;
+  const restraint = 72;
+  const allowedTime = 700;
+
+  element.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    pointerId = event.pointerId;
+    startX = event.clientX;
+    startY = event.clientY;
+    startTime = Date.now();
+    isTracking = true;
+    element.classList.add("is-touching");
+    element.setPointerCapture?.(pointerId);
+  });
+
+  element.addEventListener("pointerup", (event) => {
+    if (!isTracking || (pointerId !== null && event.pointerId !== pointerId)) return;
+
+    const distanceX = event.clientX - startX;
+    const distanceY = event.clientY - startY;
+    const elapsed = Date.now() - startTime;
+    const isHorizontalSwipe = elapsed <= allowedTime && Math.abs(distanceX) >= threshold && Math.abs(distanceY) <= restraint;
+
+    element.classList.remove("is-touching");
+    element.releasePointerCapture?.(pointerId);
+    isTracking = false;
+    pointerId = null;
+
+    if (isHorizontalSwipe) {
+      event.preventDefault();
+      if (distanceX < 0) onLeft?.();
+      if (distanceX > 0) onRight?.();
+      return;
+    }
+
+    if (Math.abs(distanceX) < 8 && Math.abs(distanceY) < 8) onTap?.(event);
+  });
+
+  element.addEventListener("pointercancel", () => {
+    if (!isTracking) return;
+    element.classList.remove("is-touching");
+    if (pointerId !== null) element.releasePointerCapture?.(pointerId);
+    isTracking = false;
+    pointerId = null;
+  });
+}
+
+function setupProductCardCarousel(article, images) {
+  const media = article.querySelector("[data-product-card-media]");
+  const image = article.querySelector("[data-product-card-image]");
+  const dots = Array.from(article.querySelectorAll("[data-product-card-dot]"));
+  const prevButton = article.querySelector("[data-product-card-prev]");
+  const nextButton = article.querySelector("[data-product-card-next]");
+  if (!media || !image || images.length < 2) return;
+
+  let currentIndex = 0;
+  const normalizeIndex = (index) => (index + images.length) % images.length;
+
+  const setImage = (index) => {
+    currentIndex = normalizeIndex(index);
+    image.classList.remove("is-changing");
+    window.requestAnimationFrame(() => {
+      image.src = images[currentIndex];
+      image.classList.add("is-changing");
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === currentIndex);
+      dot.setAttribute("aria-current", dotIndex === currentIndex ? "true" : "false");
+    });
+  };
+
+  prevButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setImage(currentIndex - 1);
+  });
+
+  nextButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setImage(currentIndex + 1);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setImage(index);
+    });
+  });
+
+  const markSwiped = () => {
+    article.dataset.carouselSwiped = "true";
+    window.setTimeout(() => {
+      delete article.dataset.carouselSwiped;
+    }, 250);
+  };
+
+  attachSwipe(media, {
+    onLeft: () => {
+      markSwiped();
+      setImage(currentIndex + 1);
+    },
+    onRight: () => {
+      markSwiped();
+      setImage(currentIndex - 1);
+    }
+  });
 }
 
 function renderFeatureItems(features = []) {
@@ -396,22 +529,38 @@ function renderProductDetailModal(product) {
   `;
 
   const galleryImage = $("#modalGalleryImage");
+  const galleryWrap = galleryImage?.closest(".modal-main-image-wrap");
   const galleryStrip = $("#modalGalleryStrip");
   if (!galleryImage || !galleryStrip) return;
 
   galleryStrip.innerHTML = "";
-  images.slice(0, 8).forEach((src, index) => {
+  const galleryImages = images.slice(0, 8);
+  let galleryIndex = 0;
+
+  const setGalleryImage = (index) => {
+    if (!galleryImages.length) return;
+    galleryIndex = (index + galleryImages.length) % galleryImages.length;
+    galleryImage.src = galleryImages[galleryIndex];
+    galleryStrip.querySelectorAll("button").forEach((item, itemIndex) => {
+      item.classList.toggle("is-active", itemIndex === galleryIndex);
+      item.setAttribute("aria-current", itemIndex === galleryIndex ? "true" : "false");
+    });
+  };
+
+  galleryImages.forEach((src, index) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = index === 0 ? "is-active" : "";
     button.setAttribute("aria-label", `View product image ${index + 1}`);
+    button.setAttribute("aria-current", index === 0 ? "true" : "false");
     button.innerHTML = `<img src="${src}" alt="">`;
-    button.addEventListener("click", () => {
-      galleryImage.src = src;
-      galleryStrip.querySelectorAll("button").forEach((item) => item.classList.remove("is-active"));
-      button.classList.add("is-active");
-    });
+    button.addEventListener("click", () => setGalleryImage(index));
     galleryStrip.appendChild(button);
+  });
+
+  attachSwipe(galleryWrap, {
+    onLeft: () => setGalleryImage(galleryIndex + 1),
+    onRight: () => setGalleryImage(galleryIndex - 1)
   });
 
   protectImages(modalBody);
@@ -825,6 +974,11 @@ function setupQualityCarousel() {
 
   slides.forEach((slide, index) => {
     slide.addEventListener("click", () => goToSlide(index));
+  });
+
+  attachSwipe(frame, {
+    onLeft: () => goToSlide(currentIndex + 1),
+    onRight: () => goToSlide(currentIndex - 1)
   });
 
   frame.addEventListener("keydown", (event) => {
