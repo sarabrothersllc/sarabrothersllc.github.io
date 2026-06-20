@@ -138,10 +138,10 @@
     }
   ],
   "story": {
-    "image": "assets/images/home/Home-OurStory.jpg",
-    "valuesImage": "assets/images/home/SARA-Women-Owned.png",
-    "whatWeDoImage": "assets/images/home/Home-WhatWeDo.jpg",
-    "whoWeServeImage": "assets/images/home/Home-WhoWeServe.jpg",
+    "image": "assets/images/our-story/Home-OurStory.jpg",
+    "valuesImage": "assets/images/our-story/SARA-Women-Owned.png",
+    "whatWeDoImage": "assets/images/our-story/Home-WhatWeDo.jpg",
+    "whoWeServeImage": "assets/images/our-story/Home-WhoWeServe.jpg",
     "headline": "A women-owned U.S. label brand built around dependable shipping days.",
     "body": "SARA Brothers exists for sellers and teams who need shipping supplies they can trust every day. Our focus is simple: practical product quality, consistent fulfillment, clear prints, strong adhesion, and materials selected for safer, more responsible business use.",
     "cards": [
