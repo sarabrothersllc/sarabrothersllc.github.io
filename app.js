@@ -96,7 +96,6 @@ const fallbackData = {
   carriers: ["USPS", "UPS", "FedEx", "DHL", "Amazon FBA", "Amazon FBM", "eBay", "Shopify", "Walmart"],
   brand: {
     hero: "",
-    // logo: "assets/images/SARABrothers-Logo_WhiteBG-cropped.png"
     logo: "assets/images/sara_logo_transparent.png"
   },
   story: {
