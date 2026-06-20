@@ -14,6 +14,7 @@ This folder is a static GitHub Pages-ready site for SARA Brothers thermal shippi
 - `assets/video` - local video files and poster images
 - `assets/icons` - marketplace and social media icons
 
+
 ## Hosting
 
 Upload these files to the root of a GitHub Pages repository, or place the whole folder in a repo and set GitHub Pages to serve from it. No server, build step, or backend is required.
