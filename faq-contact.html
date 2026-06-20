@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="SARA Brothers FAQ and contact form for product, compatibility, and Amazon order questions.">
+    <title>SARA Brothers | FAQ &amp; Contacts</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="SARA Brothers home">
+        <img class="brand-logo" data-brand-logo src="assets/images/logo.jpg" alt="SARA Brothers logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" data-nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="faq-contact.html">FAQ &amp; Contacts</a>
+        <a class="nav-cta" href="https://www.amazon.com/gp/product/B0GCBD5TK2?th=1">Buy on Amazon</a>
+      </nav>
+    </header>
+
+    <main id="top">
+<!--      <section class="section page-hero support-page-hero">-->
+<!--        <div>-->
+<!--          <p class="eyebrow">FAQ &amp; Contacts</p>-->
+<!--          <h1>Answers first. Help when you need it.</h1>-->
+<!--          <p>Find quick answers about printers, surfaces, pack sizes, and shipping label use. If you still need help, send a message and we will follow up.</p>-->
+<!--        </div>-->
+<!--        <div class="page-hero-card">-->
+<!--          <span>Support focus</span>-->
+<!--          <strong>Product, bulk order, and compatibility questions</strong>-->
+<!--          <p>Best for sellers, warehouses, and business buyers comparing label options.</p>-->
+<!--        </div>-->
+<!--      </section>-->
+
+      <section class="section support-section">
+        <div class="support-layout">
+          <article class="support-panel contact-panel" id="contact">
+            <div class="contact-intro">
+              <p class="eyebrow">Contact us</p>
+              <h2>Questions about labels, bulk orders, or compatibility?</h2>
+              <p>Send a message and the SARA Brothers team will follow up.</p>
+<!--              <div class="contact-cards" id="contactCards"></div>-->
+            </div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <label>
+                  <span>First Name</span>
+                  <input type="text" name="firstName" autocomplete="given-name" required>
+                </label>
+                <label>
+                  <span>Last Name</span>
+                  <input type="text" name="lastName" autocomplete="family-name" required>
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input type="tel" name="phone" autocomplete="tel">
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  <span>Company</span>
+                  <input type="text" name="company" autocomplete="organization" placeholder="Optional">
+                </label>
+                <label>
+                  <span>Order or ASIN</span>
+                  <input type="text" name="order" placeholder="Optional">
+                </label>
+              </div>
+              <label>
+                <span>Country</span>
+                <select name="country">
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>United Kingdom</option>
+                  <option>Australia</option>
+                  <option>India</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                <span>Inquiry type</span>
+                <select name="topic" required>
+                  <option value="">Select one</option>
+                  <option>Product question</option>
+                  <option>Bulk order</option>
+                  <option>Printer compatibility</option>
+                  <option>Amazon order support</option>
+                  <option>Wholesale / business inquiry</option>
+                </select>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="6" required></textarea>
+              </label>
+              <button class="button primary" type="submit">Send Message</button>
+              <p class="form-note" id="formNote" aria-live="polite"></p>
+            </form>
+          </article>
+
+                    <article class="support-panel faq-panel" id="faq">
+            <div class="section-heading compact">
+              <p class="eyebrow">Answers</p>
+              <h2>Frequently asked questions.</h2>
+            </div>
+            <div class="faq-list">
+              <details open>
+                <summary>Do these labels work with inkjet or laser printers?</summary>
+                <p>No. These are direct thermal labels and are made for compatible direct thermal printers.</p>
+              </details>
+              <details>
+                <summary>Are the labels perforated?</summary>
+                <p>Yes. The fanfold stacks include pre-cut perforations for fast, clean tear-off during packing.</p>
+              </details>
+              <details>
+                <summary>What surfaces do they stick to?</summary>
+                <p>The permanent adhesive is designed for corrugated boxes, poly mailers, bubble mailers, and envelopes.</p>
+              </details>
+              <details>
+                <summary>Which pack should I start with?</summary>
+                <p>Start with 500 labels for lighter shipping, 2000 labels for steady store volume, or 3000 labels for high-volume FBA and warehouse use.</p>
+              </details>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section class="social-band" id="socialBand" aria-labelledby="socialHeading">
+        <p class="social-heading" id="socialHeading">Follow SARA Brothers</p>
+        <div class="social-links social-links-large" id="socialLinks" aria-label="SARA Brothers social links"></div>
+      </section>
+      <div class="footer-brand-block">
+        <div class="brand footer-brand">
+          <img class="brand-logo" data-brand-logo src="assets/images/logo.jpg" alt="SARA Brothers logo">
+        </div>
+        <div class="footer-badges" aria-label="SARA Brothers product certifications">
+          <p>Sustainable, Safe &amp; Eco &amp; Environment Friendly</p>
+          <div class="footer-badge-row">
+            <img src="assets/images/badges/BPA_Free.svg" alt="BPA Free">
+            <img src="assets/images/badges/RoHS.svg" alt="RoHS Compliant">
+            <img src="assets/images/badges/REACH.svg" alt="REACH Compliant">
+            <img src="assets/images/badges/FSC.svg" alt="FSC Certified">
+            <img src="assets/images/badges/Prop65.svg" alt="Prop 65 Approved">
+            <img src="assets/images/badges/PFAS.svg" alt="PFAS Free">
+          </div>
+        </div>
+      </div>
+      <small>Copyright &copy; 2026 SARA Brothers. Quality You Can Trust.<br>All rights reserved.</small>
+    </footer>
+
+    <script src="app.js?v=20260620-json-source"></script>
+  </body>
+</html>
