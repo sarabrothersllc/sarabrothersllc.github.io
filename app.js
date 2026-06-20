@@ -6,26 +6,83 @@ const state = {
 };
 
 const fallbackData = {
-  content: {
-    hero: {
-      eyebrow: "Direct thermal labels",
-      headline: "Commercial Grade Quality\n4x6 Thermal Shipping Labels\nfor smoother fulfillment.",
-      lede: "Choose SARA Brothers 4x6 Direct Thermal Shipping labels. Heavy-duty adhesion, flawless scans, and absolutely zero printer drama for busy shipping teams."
+  "brand": {
+    "name": "SARA Brothers",
+    "tagline": "Quality You Can Trust",
+    "site": "https://www.sarabrothers.com/",
+    "logo": "assets/images/sara_logo_transparent.png",
+    "hero": ""
+  },
+  "content": {
+    "hero": {
+      "eyebrow": "Direct thermal labels",
+      "headline": "Commercial Grade Quality\n4x6 Direct Thermal Shipping Labels\nfor smoother fulfillment.",
+      "lede": "SARA Brothers fanfold labels are built for ecommerce sellers, warehouse teams, and daily shipping workflows that need clean scans, strong adhesion, and no printer drama."
     }
   },
-  announcements: [],
-  products: [
+  "social": [
     {
-      id: "500",
-      name: "4x6 Direct Thermal Shipping Labels",
-      shortName: "500 Labels",
-      pack: "1 Fanfold Stack",
-      count: "500 labels",
-      price: "<del>$19.99</del> <br/>$14.99",
-      unit: "$0.02 / label<br>**Additional discount for Amazon Business Users",
-      amazon: "https://www.amazon.com/gp/product/B0GCBD5TK2?th=1",
-      image: "assets/images/products/Main1PK.png",
-      thumbs: [
+      "name": "Instagram",
+      "icon": "assets/icons/instagram.svg",
+      "url": "https://www.instagram.com/sarabrothers21/"
+    },
+    {
+      "name": "TikTok",
+      "icon": "assets/icons/tiktok.svg",
+      "url": "https://www.tiktok.com/@sarabrothers21"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "assets/icons/linkedln.svg",
+      "url": "https://www.linkedin.com/in/sarabrothers/"
+    }
+  ],
+  "contact": {
+    "email": "info@sarabrothers.com",
+    "phone": "",
+    "location": "United States",
+    "formEndpoint": "",
+    "successMessage": "We have received your message and shall get back to you in 1-2 business day.",
+    "submit": {
+      "text": "Send",
+      "emailProvider": "emailjs"
+    },
+    "emailjs": {
+      "publicKey": "VOkQZ-STSbUeEDE3V",
+      "serviceId": "service_d5e74gf",
+      "templateId": "template_fe17vp1"
+    },
+    "cards": [
+      {
+        "label": "Email",
+        "value": "info@sarabrothers.com",
+        "href": "mailto:info@sarabrothers.com"
+      },
+      {
+        "label": "Amazon support",
+        "value": "Message us through your Amazon order",
+        "href": "https://www.amazon.com/gp/product/B0GCBD5TK2?th=1"
+      },
+      {
+        "label": "Business location",
+        "value": "Serving ecommerce sellers across the United States",
+        "href": ""
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "500",
+      "name": "4x6 Direct Thermal Shipping Labels",
+      "shortName": "500 Labels",
+      "pack": "1 Fanfold Stack",
+      "count": "500 labels",
+      "price": "$14.99",
+      "unit": "$0.03 / label",
+      "asin": "B0GCBD5TK2",
+      "amazon": "https://www.amazon.com/gp/product/B0GCBD5TK2?th=1",
+      "image": "assets/images/products/Main1PK.png",
+      "thumbs": [
         "assets/images/products/Main1PK.png",
         "assets/images/products/prod_img_01.png",
         "assets/images/products/prod_img_02.png",
@@ -36,19 +93,20 @@ const fallbackData = {
         "assets/images/products/prod_img_07.png",
         "assets/images/products/prod_img_08.png"
       ],
-      bestFor: "New shops, home offices, and lower-volume shipping desks."
+      "bestFor": "New shops, home offices, and lower-volume shipping desks."
     },
     {
-      id: "2000",
-      name: "4x6 Direct Thermal Shipping Labels",
-      shortName: "2000 Labels",
-      pack: "4 Fanfold Stacks",
-      count: "2000 labels",
-      price: "<del>$69.99</del> <br/>$49.99",
-      unit: "$0.02 / label<br>**Additional discount for Amazon Business Users",
-      amazon: "https://www.amazon.com/gp/product/B0FJBL41PF?th=1",
-      image: "assets/images/products/Main4PK.png",
-      thumbs: [
+      "id": "2000",
+      "name": "4x6 Direct Thermal Shipping Labels",
+      "shortName": "2000 Labels",
+      "pack": "4 Fanfold Stacks",
+      "count": "2000 labels",
+      "price": "$49.99",
+      "unit": "$0.02 / label",
+      "asin": "B0FJBL41PF",
+      "amazon": "https://www.amazon.com/gp/product/B0FJBL41PF?th=1",
+      "image": "assets/images/products/Main4PK.png",
+      "thumbs": [
         "assets/images/products/Main4PK.png",
         "assets/images/products/prod_img_01.png",
         "assets/images/products/prod_img_02.png",
@@ -59,19 +117,20 @@ const fallbackData = {
         "assets/images/products/prod_img_07.png",
         "assets/images/products/prod_img_08.png"
       ],
-      bestFor: "Growing FBA, ecommerce, and warehouse teams."
+      "bestFor": "Growing FBA, ecommerce, and warehouse teams."
     },
     {
-      id: "3000",
-      name: "Commercial Grade 4x6 Direct Thermal Shipping Labels",
-      shortName: "3000 Labels",
-      pack: "6 Fanfold Stacks",
-      count: "3000 labels",
-      price: "<del>$119.99</del> <br/>$71.99",
-      unit: "Bulk FBA pack<br>**Additional discount for Amazon Business Users",
-      amazon: "https://www.amazon.com/gp/product/B0FJC8L9K1?th=1",
-      image: "assets/images/products/Main6PK.png",
-      thumbs: [
+      "id": "3000",
+      "name": "Commercial Grade 4x6 Direct Thermal Shipping Labels",
+      "shortName": "3000 Labels",
+      "pack": "6 Fanfold Stacks",
+      "count": "3000 labels",
+      "price": "View on Amazon",
+      "unit": "Bulk FBA pack",
+      "asin": "B0FJC8L9K1",
+      "amazon": "https://www.amazon.com/gp/product/B0FJC8L9K1?th=1",
+      "image": "assets/images/products/Main6PK.png",
+      "thumbs": [
         "assets/images/products/Main6PK.png",
         "assets/images/products/prod_img_01.png",
         "assets/images/products/prod_img_02.png",
@@ -82,68 +141,119 @@ const fallbackData = {
         "assets/images/products/prod_img_07.png",
         "assets/images/products/prod_img_08.png"
       ],
-      bestFor: "High-volume operations that need fewer reorders."
+      "bestFor": "High-volume operations that need fewer reorders."
     }
   ],
-  features: [
+  "story": {
+    "image": "assets/images/our-story/Home-OurStory.jpg",
+    "headline": "SARA Brothers Promise..",
+    "body": "SARA Brothers exists for sellers and teams who need shipping supplies they can trust every day. Our focus is simple: practical product quality, consistent fulfillment, clear prints, strong adhesion, and materials selected for safer, more responsible business use.",
+    "cards": [
+      {
+        "title": "What We Do",
+        "image": "assets/images/our-story/what-we-do.jpg",
+        "text": "Through our unwavering commitment to excellence, we manufacture & supply premium, commercial-grade 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and reliable performance, ensuring your daily shipping workflows run smoothly without a hitch."
+      },
+      {
+        "title": "Who We Serve",
+        "image": "assets/images/our-story/who-we-serve.jpg",
+        "text": "From home-based sellers to retail, grocery, warehouse, and delivery operations, our labels support teams that ship daily."
+      },
+      {
+        "title": "Our Story",
+        "image": "assets/images/our-story/our-story.png",
+        "text": "Proudly women-owned and locally rooted in the USA, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. Your growth is our passion, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves."
+      },
+      {
+        "title": "Our Values",
+        "image": "assets/images/our-story/our-values.jpeg",
+        "text": "Uncompromising quality, practical value, and responsibly sourced materials guide every product bearing the SARA Brothers name. We are committed to delivering dependable solutions that support your daily operations with integrity."
+      }
+    ]
+  },
+  "credentials": [
+    {
+      "name": "FSC",
+      "icon": "assets/images/badges/FSC.svg",
+      "text": "Sustainable sourcing"
+    },
+    {
+      "name": "RoHS",
+      "icon": "assets/images/badges/RoHS.svg",
+      "text": "Safe and non-toxic"
+    },
+    {
+      "name": "PFAS-Free",
+      "icon": "assets/images/badges/PFAS.svg",
+      "text": "No harmful chemicals"
+    },
+    {
+      "name": "Prop 65",
+      "icon": "assets/images/badges/Prop65.svg",
+      "text": "California compliant"
+    },
+    {
+      "name": "REACH",
+      "icon": "assets/images/badges/REACH.svg",
+      "text": "EU chemical compliance"
+    },
+    {
+      "name": "BPA Free",
+      "icon": "assets/images/badges/BPA_Free.svg",
+      "text": "BPA-free paper"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Jam-Free Smooth Prints",
+      "src": "assets/video/JamFree-SmoothPrints-W-Poster.mp4",
+      "poster": "assets/video/JamFree-SmoothPrints-W-Poster.jpg",
+      "caption": "See how SARA Brothers labels support uninterrupted thermal printing."
+    },
+    {
+      "title": "1 Pack Unboxing",
+      "src": "assets/video/SARA-1PK-Unboxing-FINAL.mp4",
+      "poster": "assets/video/Main1PK.png",
+      "caption": "A quick look at the 500-label pack and packaging."
+    },
+    {
+      "title": "Product Unboxing",
+      "src": "assets/video/Unboxing.mp4",
+      "poster": "assets/video/Unboxing_Poster.jpg",
+      "caption": "Product handling, label stack, and ready-to-use format."
+    }
+  ],
+  "features": [
     "Waterproof, smudge-proof, oil-resistant, and alcohol-resistant top-coated paper",
     "Permanent adhesive for corrugated boxes, poly mailers, bubble mailers, and envelopes",
     "Jam-free fanfold feeding with clean perforations between labels",
     "BPA-free material for dependable daily business use",
     "No ink, toner, or ribbon required"
   ],
-  printers: ["Rollo", "Zebra", "Munbyn", "Polono", "Arkscan", "LabelRange", "Most direct thermal printers"],
-  carriers: ["USPS", "UPS", "FedEx", "DHL", "Amazon FBA", "Amazon FBM", "eBay", "Shopify", "Walmart"],
-  brand: {
-    hero: "",
-    logo: "assets/images/sara_logo_transparent.png"
-  },
-  story: {
-    image: "assets/images/our-story/Home-OurStory.jpg",
-    headline: "SARA Brothers Promise..",
-    body: "SARA Brothers exists for sellers and teams who need shipping supplies they can trust every day. Our focus is simple: practical product quality, consistent fulfillment, clear prints, strong adhesion, and materials selected for safer, more responsible business use.",
-
-    cards: [
-      { title: "What We Do", text: "Through our unwavering commitment to excellence, we manufacture & supply premium, commercial-grade 4x6 direct thermal labels engineered for uninterrupted, jam-free printing. Our dedication to serving high-volume operations drives us to deliver consistent quality and reliable performance, ensuring your daily shipping workflows run smoothly without a hitch.", image: "assets/images/our-story/what-we-do.jpg" },
-      { title: "Who We Serve", text: "From home-based sellers to retail, grocery, warehouse, and delivery operations, our labels support teams that ship daily.", image: "assets/images/our-story/who-we-serve.jpg" },
-      { title: "Our Story", text: "Proudly women-owned and locally rooted in the USA, we are driven by a heartfelt dedication to serving the hard-working businesses and logistics teams that keep our country moving. Your growth is our passion, and we back your daily journey with an unwavering commitment to the premium quality your brand deserves.", image: "assets/images/our-story/our-story.png" },
-      { title: "Our Values", text: "Uncompromising quality, practical value, and responsibly sourced materials guide every product bearing the SARA Brothers name. We are committed to delivering dependable solutions that support your daily operations with integrity.", image: "assets/images/our-story/our-values.jpeg" }
-    ]
-  },
-  credentials: [
-    { name: "FSC", icon: "assets/images/badges/FSC.svg", text: "Sustainable sourcing"},
-    { name: "RoHS", icon: "assets/images/badges/RoHS.svg", text: "Safe and non-toxic" },
-    { name: "PFAS-Free", icon: "assets/images/badges/PFAS.svg", text: "No harmful chemicals" },
-    { name: "Prop 65", icon: "assets/images/badges/Prop65.svg", text: "California compliant" },
-    { name: "REACH", icon: "assets/images/badges/REACH.svg", text: "EU chemical compliance" },
-    { name: "BPA Free", icon: "assets/images/badges/BPA_Free.svg", text: "BPA-free paper" }
+  "printers": [
+    "Rollo",
+    "Zebra",
+    "Munbyn",
+    "Polono",
+    "Arkscan",
+    "LabelRange",
+    "Most direct thermal printers"
   ],
-  videos: [
-    { title: "Jam-Free Smooth Prints", src: "assets/video/JamFree-SmoothPrints-W-Poster.mp4", poster: "assets/video/JamFree-SmoothPrints-W-Poster.jpg", caption: "See how SARA Brothers labels support uninterrupted thermal printing." },
-    { title: "Product Unboxing (Single Stack)", src: "assets/video/SARA-1PK-Unboxing-FINAL.mp4", poster: "assets/video/Main1PK.png", caption: "A quick look at the 500-label pack and packaging." },
-    { title: "Product Unboxing (4 Stack)", src: "assets/video/Unboxing.mp4", poster: "assets/video/Unboxing_Poster.jpg", caption: "Product handling, label stack, and ready-to-use format." }
+  "carriers": [
+    "USPS",
+    "UPS",
+    "FedEx",
+    "DHL",
+    "Amazon FBA",
+    "eBay",
+    "Shopify",
+    "Walmart"
   ],
-  social: [
-    { name: "Instagram", icon: "assets/icons/instagram.svg", url: "https://www.instagram.com/sarabrothers21/" },
-    { name: "TikTok", icon: "assets/icons/tiktok.svg", url: "https://www.tiktok.com/@sarabrothers21" },
-    { name: "LinkedIn", icon: "assets/icons/linkedln.svg", url: "https://www.linkedin.com/in/sarabrothers/" }
-  ],
-  contact: {
-    email: "info@sarabrothers.com",
-    formEndpoint: "",
-    successMessage: "We have received your message and shall get back to you in 1-2 business day.",
-    submit: { text: "Send", emailProvider: "emailjs" },
-    emailjs: {
-      publicKey: "VOkQZ-STSbUeEDE3V",
-      serviceId: "service_d5e74gf",
-      templateId: "template_fe17vp1"
-    },
-    cards: [
-      // { label: "Email", value: "info@sarabrothers.com", href: "mailto:info@sarabrothers.com" },
-      { label: "Amazon support", value: "Message us through your Amazon order", href: "https://www.amazon.com/gp/product/B0GCBD5TK2?th=1" },
-      { label: "Business location", value: "Serving ecommerce sellers across the United States", href: "" }
-    ]
-  }
+  "announcements": [
+    "Authenticity Check: Sold Exclusively on Amazon.com",
+    "Heavy discounts for limited time - Only on amazon.com",
+    "Rolls coming up shortly!"
+  ]
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -465,6 +575,12 @@ function renderAnnouncements(announcements = []) {
   });
 }
 
+function hasRenderedAnnouncements() {
+  const band = $("#announcementBand");
+  const list = $("#announcementList");
+  return Boolean(band && list && !band.hidden && list.children.length);
+}
+
 function renderContent(content = {}) {
   const eyebrow = $("#heroEyebrow");
   const headline = $("#heroHeadline");
@@ -745,6 +861,7 @@ async function init() {
   renderContent(data.content);
   const productGrid = $("#productGrid");
   if (productGrid) productGrid.append(...state.products.map(productCard));
+  if (!hasRenderedAnnouncements()) renderAnnouncements(data.announcements || fallbackData.announcements);
   renderStory(data.story);
   renderCredentials(data.credentials);
   renderVideos(data.videos);
