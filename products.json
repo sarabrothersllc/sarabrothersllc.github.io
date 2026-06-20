@@ -137,8 +137,11 @@
       "bestFor": "High-volume operations that need fewer reorders."
     }
   ],
+
+
+
   "story": {
-    "whatWeDoImage": "assets/images/our-story/what-we-do.jpg",
+    "whatWeDoImage": "assets/images/our-story/logo.png",
     "whoWeServeImage": "assets/images/our-story/who-we-serve.jpg",
     "image": "assets/images/our-story/our-story.png",
     "valuesImage": "assets/images/our-story/our-values.jpeg",
