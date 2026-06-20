@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <title>Prop 65 Approved Icon (Brown - Updated Leaf)</title>
+  <style>
+    .rect-border-prop65 {
+      fill: none;
+      stroke: #6D4C41; /* Dark Brown border */
+      stroke-width: 5;
+      rx: 15;
+      ry: 15;
+    }
+    .leaf-prop65 {
+      fill: #8D6E63; /* Medium Brown leaf */
+    }
+    .leaf-vein-prop65 {
+      fill: none;
+      stroke: #FFFFFF; /* White veins */
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+    .text-prop65-main {
+      font-family: sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      fill: #333333;
+      text-anchor: start;
+    }
+    .text-prop65-sub {
+      font-family: sans-serif;
+      font-size: 20px;
+      fill: #333333;
+      text-anchor: start;
+    }
+  </style>
+  <g id="Prop_65_Approved_Icon_Brown_Updated_Leaf">
+    <rect class="rect-border-prop65" x="5" y="5" width="190" height="90"/>
+
+    <path class="leaf-prop65" d="M25,85 C15,70 15,30 35,15 C55,0 60,30 50,50 C40,70 45,90 25,85 Z"/>
+    
+    <line class="leaf-vein-prop65" x1="35" y1="15" x2="35" y2="80"/>
+    <line class="leaf-vein-prop65" x1="35" y1="30" x2="20" y2="40"/>
+    <line class="leaf-vein-prop65" x1="35" y1="45" x2="20" y2="55"/>
+    <line class="leaf-vein-prop65" x1="35" y1="60" x2="20" y2="70"/>
+    <line class="leaf-vein-prop65" x1="35" y1="30" x2="48" y2="35"/>
+    <line class="leaf-vein-prop65" x1="35" y1="45" x2="48" y2="48"/>
+
+    <text class="text-prop65-main" x="70" y="45">Prop 65</text>
+    <text class="text-prop65-sub" x="70" y="70">Approved</text>
+  </g>
+</svg>
