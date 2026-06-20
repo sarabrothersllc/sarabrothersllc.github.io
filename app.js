@@ -77,7 +77,7 @@ const fallbackData = {
       "shortName": "500 Labels",
       "pack": "1 Fanfold Stack",
       "count": "500 labels",
-      "price": "$15.99",
+      "price": "<del>19.99</del>  $15.99",
       "unit": "$0.03 / label",
       "asin": "B0GCBD5TK2",
       "amazon": "https://www.amazon.com/gp/product/B0GCBD5TK2?th=1",
@@ -101,7 +101,7 @@ const fallbackData = {
       "shortName": "2000 Labels",
       "pack": "4 Fanfold Stacks",
       "count": "2000 labels",
-      "price": "$49.99",
+      "price": "<del>69.99</del>  $49.99",
       "unit": "$0.02 / label",
       "asin": "B0FJBL41PF",
       "amazon": "https://www.amazon.com/gp/product/B0FJBL41PF?th=1",
@@ -125,7 +125,7 @@ const fallbackData = {
       "shortName": "3000 Labels",
       "pack": "6 Fanfold Stacks",
       "count": "3000 labels",
-      "price": "View on Amazon",
+      "price": "<del>119.99</del>  $69.99",
       "unit": "Bulk FBA pack",
       "asin": "B0FJC8L9K1",
       "amazon": "https://www.amazon.com/gp/product/B0FJC8L9K1?th=1",
@@ -555,7 +555,11 @@ function renderProductDetailModal(product) {
       </header>
 
       <div class="modal-media-viewer">
-        <div class="modal-thumb-rail" id="modalGalleryStrip" aria-label="Product image gallery"></div>
+        <div class="modal-thumb-carousel" aria-label="Product thumbnail carousel">
+          <button class="modal-thumb-control modal-thumb-up" type="button" data-modal-thumb-prev aria-label="Previous product thumbnail">▲</button>
+          <div class="modal-thumb-rail" id="modalGalleryStrip" aria-label="Product image gallery"></div>
+          <button class="modal-thumb-control modal-thumb-down" type="button" data-modal-thumb-next aria-label="Next product thumbnail">▼</button>
+        </div>
         <div class="modal-main-image-wrap">
           <img id="modalGalleryImage" src="${images[0] || product.image}" alt="SARA Brothers ${product.shortName} media">
         </div>
@@ -570,6 +574,8 @@ function renderProductDetailModal(product) {
   const galleryImage = $("#modalGalleryImage");
   const galleryWrap = galleryImage?.closest(".modal-main-image-wrap");
   const galleryStrip = $("#modalGalleryStrip");
+  const thumbPrev = modalBody.querySelector("[data-modal-thumb-prev]");
+  const thumbNext = modalBody.querySelector("[data-modal-thumb-next]");
   if (!galleryImage || !galleryStrip) return;
 
   galleryStrip.innerHTML = "";
@@ -584,6 +590,11 @@ function renderProductDetailModal(product) {
       item.classList.toggle("is-active", itemIndex === galleryIndex);
       item.setAttribute("aria-current", itemIndex === galleryIndex ? "true" : "false");
     });
+    galleryStrip.querySelector("button.is-active")?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "nearest"
+    });
   };
 
   galleryImages.forEach((src, index) => {
@@ -596,6 +607,9 @@ function renderProductDetailModal(product) {
     button.addEventListener("click", () => setGalleryImage(index));
     galleryStrip.appendChild(button);
   });
+
+  thumbPrev?.addEventListener("click", () => setGalleryImage(galleryIndex - 1));
+  thumbNext?.addEventListener("click", () => setGalleryImage(galleryIndex + 1));
 
   attachSwipe(galleryWrap, {
     onMove: (distanceX) => {
