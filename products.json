@@ -141,9 +141,12 @@
 
 
   "story": {
-    "whatWeDoImage": "assets/images/our-story/logo.png",
-    "whoWeServeImage": "assets/images/our-story/who-we-serve.jpg",
+
+    "whatWeDoImage": "assets/images/our-story/who-we-serve.jpg",
+    "whoWeServeImage": "assets/images/our-story/logo.png",
     "image": "assets/images/our-story/our-story.png",
+
+
     "valuesImage": "assets/images/our-story/our-values.jpeg",
 
 
