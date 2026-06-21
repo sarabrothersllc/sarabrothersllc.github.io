@@ -2461,7 +2461,8 @@ body.modal-open {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 16px 44px rgba(39, 52, 44, 0.08);
-  touch-action: pan-y;
+  touch-action: none;
+  cursor: grab;
 }
 
 .modal-main-image-wrap img {
@@ -2509,7 +2510,7 @@ body.modal-open {
   line-height: 1.2;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 980px) {
   .modal-detail-compact {
     padding: 56px 14px 18px;
   }
@@ -2604,7 +2605,7 @@ body.modal-open {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 980px) {
   .product-modal {
     padding: 8px;
   }
@@ -2644,7 +2645,7 @@ body.modal-open {
     min-height: auto;
   }
 
-  .modal-main-image-wrap {
+.modal-main-image-wrap {
     order: 1;
     min-height: min(58dvh, 430px);
     padding: 8px;
@@ -2808,6 +2809,10 @@ body.modal-open {
   outline: none;
   perspective: 1200px;
   touch-action: pan-y;
+}
+
+.modal-main-image-wrap.is-dragging {
+  cursor: grabbing;
 }
 
 .quality-carousel-frame::before,
@@ -3500,7 +3505,7 @@ button[disabled] {
   box-shadow: none;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 980px) {
   html,
   body {
     max-width: 100%;

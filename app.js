@@ -374,7 +374,7 @@ function getProductImages(product) {
   return [...new Set([product.image, ...(product.thumbs || [])].filter(Boolean))];
 }
 
-function attachSwipe(element, { onLeft, onRight, onTap, onMove, onSettle } = {}) {
+function attachSwipe(element, { onLeft, onRight, onTap, onMove, onSettle, threshold = 42, restraint = 72, allowedTime = 700 } = {}) {
   if (!element) return;
 
   let startX = 0;
@@ -384,9 +384,6 @@ function attachSwipe(element, { onLeft, onRight, onTap, onMove, onSettle } = {})
   let isTracking = false;
   let isDragging = false;
 
-  const threshold = 42;
-  const restraint = 72;
-  const allowedTime = 700;
   const dragStart = 8;
 
   const finish = (event, wasCanceled = false) => {
@@ -612,6 +609,9 @@ function renderProductDetailModal(product) {
   thumbNext?.addEventListener("click", () => setGalleryImage(galleryIndex + 1));
 
   attachSwipe(galleryWrap, {
+    threshold: 28,
+    restraint: 120,
+    allowedTime: 1200,
     onMove: (distanceX) => {
       const maxDrag = (galleryWrap?.clientWidth || 320) * 0.28;
       galleryImage.style.transform = `translateX(${Math.max(-maxDrag, Math.min(maxDrag, distanceX))}px) scale(0.985)`;
