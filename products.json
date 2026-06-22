@@ -119,7 +119,7 @@
       "pack": "6 Fanfold Stacks",
       "count": "3000 labels",
       "price": "<del>119.99</del>  $69.99",
-      "unit": "Bulk FBA pack",
+      "unit": "$0.02 / label",
       "asin": "B0FJC8L9K1",
       "amazon": "https://www.amazon.com/gp/product/B0FJC8L9K1?th=1",
       "image": "assets/images/products/Main6PK.png",
@@ -207,16 +207,16 @@
       "caption": "See how SARA Brothers labels support uninterrupted thermal printing."
     },
     {
-      "title": "1 Pack Unboxing",
+      "title": "Product Unboxing (1 Pack)",
       "src": "assets/video/SARA-1PK-Unboxing-FINAL.mp4",
       "poster": "assets/video/Main1PK.png",
-      "caption": "A quick look at the 500-label pack and packaging."
+      "caption": "Quick look at the 500-label pack and packaging."
     },
     {
-      "title": "Product Unboxing",
+      "title": "Product Unboxing (4 Pack)",
       "src": "assets/video/Unboxing.mp4",
       "poster": "assets/video/Unboxing_Poster.jpg",
-      "caption": "Product handling, label stack, and ready-to-use format."
+      "caption": "Quick look at the 4-stacks packaging."
     }
   ],
   "features": [
