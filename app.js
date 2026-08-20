@@ -141,7 +141,7 @@ const fallbackData = {
         "assets/images/products/prod_img_07.png",
         "assets/images/products/prod_img_08.png"
       ],
-      "bestFor": "$5 Extra off over already heavily discounted price<br>High-volume operations that need fewer reorders."
+      "bestFor": <hr style="border: none; background-color: #ff5733;">"$5 Extra off over already heavily discounted price</hr><br>High-volume operations that need fewer reorders."
     }
   ],
   "story": {
