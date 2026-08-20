@@ -141,7 +141,7 @@ const fallbackData = {
         "assets/images/products/prod_img_07.png",
         "assets/images/products/prod_img_08.png"
       ],
-      "bestFor": <hr style="border: none; background-color: #ff5733;">"$5 Extra off over already heavily discounted price</hr><br>High-volume operations that need fewer reorders."
+      "bestFor": "Clip $5 Extra off coupon on Amazon.com<br>High-volume operations that need fewer reorders."
     }
   ],
   "story": {
@@ -254,7 +254,7 @@ const fallbackData = {
   "announcements": [
     "**** Authenticity Check: Sold Exclusively on Amazon.com ****",
     "Heavy discounts for limited time - Only on amazon.com",
-    "Extra $5 Off on 6 pack for limited time!"
+    "Clip extra $5 Off coupon on 6 pack for limited time!"
   ]
 };
 
