@@ -252,9 +252,9 @@ const fallbackData = {
     "More.."
   ],
   "announcements": [
-    "Authenticity Check: Sold Exclusively on Amazon.com",
+    "**** Authenticity Check: Sold Exclusively on Amazon.com ****",
     "Heavy discounts for limited time - Only on amazon.com",
-    "Rolls coming up shortly!"
+    "Extra $5 Off on 6 pack for limited time!"
   ]
 };
 
